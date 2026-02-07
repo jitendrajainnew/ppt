@@ -5,7 +5,8 @@ aiohttp>=3.9.0
 # OCR and image processing
 Pillow>=10.0.0
 pytesseract>=0.3.10
-easyocr>=1.7.0
+# easyocr is optional (requires PyTorch, heavy install)
+# Install manually if needed: pip install easyocr
 
 # Data processing
 pandas>=2.1.0
@@ -13,7 +14,6 @@ openpyxl>=3.1.0
 
 # Visualization
 matplotlib>=3.8.0
-plotly>=5.18.0
 
 # Utilities
 tqdm>=4.66.0
