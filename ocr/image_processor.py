@@ -1,6 +1,6 @@
 """
 OCR pipeline for extracting text from trade screenshot images.
-Supports both Tesseract and EasyOCR backends.
+Supports Tesseract, EasyOCR, and surya (pure Python, no system deps).
 """
 
 import json
@@ -51,7 +51,6 @@ def ocr_with_tesseract(image_path: str) -> str:
     import pytesseract
 
     img = preprocess_image(image_path)
-    # Use --psm 6 for uniform block of text, --oem 3 for default LSTM engine
     custom_config = r"--oem 3 --psm 6"
     text = pytesseract.image_to_string(img, config=custom_config)
     return text.strip()
@@ -68,6 +67,25 @@ def ocr_with_easyocr(image_path: str, reader=None) -> str:
     return "\n".join(results).strip()
 
 
+def ocr_with_surya(image_path: str, recognizer=None) -> str:
+    """Extract text using surya OCR (pure Python, no system deps)."""
+    from surya.recognition import RecognitionPredictor
+
+    if recognizer is None:
+        recognizer = RecognitionPredictor()
+
+    img = Image.open(image_path)
+    if img.mode != "RGB":
+        img = img.convert("RGB")
+
+    results = recognizer([img])
+    lines = []
+    for page in results:
+        for line in page.text_lines:
+            lines.append(line.text)
+    return "\n".join(lines).strip()
+
+
 def process_single_image(args: tuple) -> dict:
     """Process a single image - used for parallel processing."""
     image_path, msg_id, engine = args
@@ -82,8 +100,10 @@ def process_single_image(args: tuple) -> dict:
     try:
         if engine == "tesseract":
             result["ocr_text"] = ocr_with_tesseract(image_path)
-        else:
+        elif engine == "easyocr":
             result["ocr_text"] = ocr_with_easyocr(image_path)
+        elif engine == "surya":
+            result["ocr_text"] = ocr_with_surya(image_path)
     except Exception as e:
         result["error"] = str(e)
 
@@ -97,12 +117,20 @@ class ImageProcessor:
         self.engine = engine or config.OCR_ENGINE
         self.results_file = config.OUTPUT_DIR / "ocr_results.json"
         self.easyocr_reader = None
+        self.surya_recognizer = None
 
     def _init_easyocr(self):
         """Initialize EasyOCR reader (heavy, do once)."""
         if self.engine == "easyocr" and self.easyocr_reader is None:
             import easyocr
             self.easyocr_reader = easyocr.Reader(config.OCR_LANGUAGES, gpu=False)
+
+    def _init_surya(self):
+        """Initialize surya recognizer (do once)."""
+        if self.engine == "surya" and self.surya_recognizer is None:
+            from surya.recognition import RecognitionPredictor
+            print("  Loading surya OCR model (first time takes a minute)...")
+            self.surya_recognizer = RecognitionPredictor()
 
     def process_all_images(self, messages: list = None) -> list:
         """
@@ -143,12 +171,19 @@ class ImageProcessor:
 
         results = list(existing_results)
 
-        if self.engine == "easyocr":
-            # EasyOCR doesn't parallelize well, process sequentially
-            self._init_easyocr()
+        if self.engine in ("easyocr", "surya"):
+            # These don't parallelize well, process sequentially
+            if self.engine == "easyocr":
+                self._init_easyocr()
+            else:
+                self._init_surya()
+
             for image_path, msg_id, engine in tqdm(remaining, desc="OCR"):
                 try:
-                    text = ocr_with_easyocr(image_path, reader=self.easyocr_reader)
+                    if self.engine == "easyocr":
+                        text = ocr_with_easyocr(image_path, reader=self.easyocr_reader)
+                    else:
+                        text = ocr_with_surya(image_path, recognizer=self.surya_recognizer)
                     results.append({
                         "msg_id": msg_id,
                         "image_path": image_path,

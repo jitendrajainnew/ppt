@@ -38,7 +38,7 @@ BATCH_SIZE = int(os.getenv("BATCH_SIZE", "100"))
 
 # ── OCR settings ─────────────────────────────────────────────
 # "tesseract" or "easyocr"
-OCR_ENGINE = os.getenv("OCR_ENGINE", "tesseract")
+OCR_ENGINE = os.getenv("OCR_ENGINE", "surya")
 
 # Number of parallel OCR workers
 OCR_WORKERS = int(os.getenv("OCR_WORKERS", "4"))

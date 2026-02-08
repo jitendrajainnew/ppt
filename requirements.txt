@@ -4,9 +4,11 @@ aiohttp>=3.9.0
 
 # OCR and image processing
 Pillow>=10.0.0
-pytesseract>=0.3.10
-# easyocr is optional (requires PyTorch, heavy install)
-# Install manually if needed: pip install easyocr
+surya-ocr>=0.6.0
+
+# Optional OCR engines (install manually if needed):
+# pip install pytesseract   (requires system tesseract)
+# pip install easyocr       (requires PyTorch, heavy)
 
 # Data processing
 pandas>=2.1.0
