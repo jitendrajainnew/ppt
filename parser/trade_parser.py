@@ -40,12 +40,18 @@ class TradeParser:
     """Parses trade data from OCR text and message text."""
 
     # Patterns for Indian options market
+    # Build dynamic pattern from config KNOWN_SYMBOLS
     SYMBOL_PATTERN = re.compile(
-        r"\b(NIFTY|BANKNIFTY|FINNIFTY|SENSEX|NIFTY\s*50|BNF|NF)\b",
+        r"\b(" + "|".join(re.escape(s) for s in sorted(config.KNOWN_SYMBOLS, key=len, reverse=True)) + r")\b",
         re.IGNORECASE,
     )
     STRIKE_PATTERN = re.compile(
         r"\b(\d{4,6})\s*(CE|PE|CALL|PUT)\b", re.IGNORECASE
+    )
+    # Catch ANY word before strike+CE/PE (e.g. "RELIANCE 2500 CE", "TATAPOWER 450 PE")
+    SYMBOL_STRIKE_PATTERN = re.compile(
+        r"\b([A-Z][A-Z0-9&\-]{1,20})\s+(\d{2,6})\s*(CE|PE|CALL|PUT)\b",
+        re.IGNORECASE,
     )
     PRICE_PATTERN = re.compile(
         r"(?:@|at|price|cmp|around|near)\s*[:\-]?\s*(\d+\.?\d*)", re.IGNORECASE
@@ -159,19 +165,34 @@ class TradeParser:
             if not has_numbers:
                 return None
 
-        # Extract symbol
-        sym_match = self.SYMBOL_PATTERN.search(text)
-        if sym_match:
-            trade.symbol = sym_match.group(1).upper().replace(" ", "")
-            confidence += 0.2
+        # Extract symbol + strike + instrument together (e.g. "RELIANCE 2500 CE")
+        combo_match = self.SYMBOL_STRIKE_PATTERN.search(text)
+        if combo_match:
+            sym = combo_match.group(1).upper()
+            # Skip common non-symbol words
+            skip_words = {"BUY", "SELL", "ABOVE", "BELOW", "NEAR", "AROUND", "TARGET", "ENTRY", "EXIT", "SL"}
+            if sym not in skip_words:
+                trade.symbol = sym
+                trade.strike_price = float(combo_match.group(2))
+                inst = combo_match.group(3).upper()
+                trade.instrument = "CE" if inst in ("CE", "CALL") else "PE"
+                confidence += 0.4
 
-        # Extract strike price and instrument type
-        strike_match = self.STRIKE_PATTERN.search(text)
-        if strike_match:
-            trade.strike_price = float(strike_match.group(1))
-            inst = strike_match.group(2).upper()
-            trade.instrument = "CE" if inst in ("CE", "CALL") else "PE"
-            confidence += 0.2
+        # Fallback: try known symbols list
+        if not trade.symbol:
+            sym_match = self.SYMBOL_PATTERN.search(text)
+            if sym_match:
+                trade.symbol = sym_match.group(1).upper().replace(" ", "")
+                confidence += 0.2
+
+        # Fallback: try strike pattern alone
+        if not trade.strike_price:
+            strike_match = self.STRIKE_PATTERN.search(text)
+            if strike_match:
+                trade.strike_price = float(strike_match.group(1))
+                inst = strike_match.group(2).upper()
+                trade.instrument = "CE" if inst in ("CE", "CALL") else "PE"
+                confidence += 0.2
 
         # Extract prices
         entry_match = self.ENTRY_PATTERN.search(text)

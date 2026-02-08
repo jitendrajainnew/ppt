@@ -7,6 +7,8 @@ Usage:
     python main.py scrape          # Step 1: Scrape Telegram channel
     python main.py scrape --web    # Step 1: Scrape via web (no API key needed)
     python main.py ocr             # Step 2: Run OCR on downloaded images
+    python main.py ocr --fresh     # Step 2: Delete old results, start over
+    python main.py ocr --limit 5   # Step 2: OCR only first 5 images (for testing)
     python main.py parse           # Step 3: Parse trade data from text + OCR
     python main.py analyze         # Step 4: Analyze trades and generate reports
     python main.py all             # Run all steps sequentially
@@ -15,6 +17,7 @@ Usage:
 
 import asyncio
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -39,15 +42,51 @@ def step_scrape(use_web: bool = False):
         return asyncio.run(run_api_scraper())
 
 
-def step_ocr():
+def step_ocr(fresh: bool = False, limit: int = 0):
     """Step 2: Run OCR on all downloaded images."""
     print("\n[STEP 2] Running OCR on images...")
-    print(f"  Using: ocr.space free API")
+    print(f"  Using: ocr.space free API (improved preprocessing)")
+    if limit > 0:
+        print(f"  Limit: first {limit} images only (demo mode)")
+    if fresh:
+        print(f"  Fresh: deleting old results, starting over")
     print()
 
     from ocr.image_processor import ImageProcessor
     processor = ImageProcessor()
-    return processor.process_all_images()
+
+    # If limit is set, only process first N images
+    if limit > 0:
+        messages_file = config.MESSAGES_DIR / "messages.json"
+        if not messages_file.exists():
+            print("ERROR: No messages.json found. Run the scraper first.")
+            return []
+        with open(messages_file, "r") as f:
+            messages = json.load(f)
+
+        # Filter only messages with images, take first N
+        image_msgs = [m for m in messages if m.get("image_path") and Path(m["image_path"]).exists()]
+        limited = image_msgs[:limit]
+        print(f"  Selected {len(limited)} images for demo\n")
+
+        results = processor.process_all_images(messages=limited, fresh=fresh)
+
+        # Show OCR results for demo
+        print("\n" + "=" * 60)
+        print("  OCR DEMO RESULTS")
+        print("=" * 60)
+        for r in results:
+            print(f"\n--- MSG {r['msg_id']} ---")
+            print(f"Image: {r['image_path']}")
+            if r["ocr_text"]:
+                print(f"OCR Text:\n{r['ocr_text'][:500]}")
+            else:
+                print(f"Error: {r.get('error', 'No text found')}")
+        print("=" * 60)
+
+        return results
+    else:
+        return processor.process_all_images(fresh=fresh)
 
 
 def step_parse():
@@ -93,6 +132,17 @@ def main():
         action="store_true",
         help="Use web scraper instead of Telethon API (no credentials needed)",
     )
+    parser.add_argument(
+        "--fresh",
+        action="store_true",
+        help="Delete old OCR results and start over from scratch",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Limit OCR to first N images (for testing, e.g. --limit 5)",
+    )
 
     args = parser.parse_args()
 
@@ -104,7 +154,7 @@ def main():
         step_scrape(use_web=args.web)
 
     elif args.step == "ocr":
-        step_ocr()
+        step_ocr(fresh=args.fresh, limit=args.limit)
 
     elif args.step == "parse":
         step_parse()
@@ -114,7 +164,7 @@ def main():
 
     elif args.step == "all":
         step_scrape(use_web=args.web)
-        step_ocr()
+        step_ocr(fresh=args.fresh, limit=args.limit)
         step_parse()
         step_analyze()
 
