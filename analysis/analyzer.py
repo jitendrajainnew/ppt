@@ -37,9 +37,10 @@ class TradeAnalyzer:
 
         self.df = pd.DataFrame(trades)
 
-        # Parse dates
+        # Parse dates (strip timezone for Excel compatibility)
         if "date" in self.df.columns:
-            self.df["date"] = pd.to_datetime(self.df["date"], errors="coerce")
+            self.df["date"] = pd.to_datetime(self.df["date"], errors="coerce", utc=True)
+            self.df["date"] = self.df["date"].dt.tz_localize(None)
             self.df["date_only"] = self.df["date"].dt.date
             self.df["hour"] = self.df["date"].dt.hour
             self.df["day_of_week"] = self.df["date"].dt.day_name()
