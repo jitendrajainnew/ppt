@@ -42,8 +42,7 @@ def step_scrape(use_web: bool = False):
 def step_ocr():
     """Step 2: Run OCR on all downloaded images."""
     print("\n[STEP 2] Running OCR on images...")
-    print(f"  Engine:  {config.OCR_ENGINE}")
-    print(f"  Workers: {config.OCR_WORKERS}")
+    print(f"  Using: ocr.space free API")
     print()
 
     from ocr.image_processor import ImageProcessor

@@ -37,14 +37,8 @@ MAX_MESSAGES = int(os.getenv("MAX_MESSAGES", "0"))
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", "100"))
 
 # ── OCR settings ─────────────────────────────────────────────
-# "tesseract" or "easyocr"
-OCR_ENGINE = os.getenv("OCR_ENGINE", "rapidocr")
-
-# Number of parallel OCR workers
-OCR_WORKERS = int(os.getenv("OCR_WORKERS", "4"))
-
-# Languages for OCR
-OCR_LANGUAGES = ["en"]
+# Free API key from https://ocr.space/ocrapi/freekey
+OCR_API_KEY = os.getenv("OCR_API_KEY", "")
 
 # ── Trade parsing settings ────────────────────────────────────
 # Common stock/option symbols to look for (add more as needed)
