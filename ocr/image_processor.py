@@ -13,7 +13,7 @@ import time
 from pathlib import Path
 
 import requests
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 from tqdm import tqdm
 
 import config
@@ -24,49 +24,99 @@ OCR_API_URL = "https://api.ocr.space/parse/image"
 
 def preprocess_image(image_path: str) -> bytes:
     """
-    Preprocess image and return as JPEG bytes (under 1MB for free API).
+    Preprocess trade screenshot for maximum OCR accuracy.
+    - Upscale small images to 2000px+ width
+    - Convert to high-contrast grayscale
+    - Sharpen text edges
+    - Auto-adjust brightness/contrast
+    - Save as high-quality PNG (better for OCR than JPEG)
     """
     img = Image.open(image_path)
 
-    if img.mode not in ("RGB", "L"):
-        img = img.convert("RGB")
-    if img.mode == "L":
+    # Convert to RGB
+    if img.mode != "RGB":
         img = img.convert("RGB")
 
-    # Resize if too large (free API limit is 1MB)
-    max_width = 1200
-    if img.width > max_width:
-        ratio = max_width / img.width
-        img = img.resize((int(img.width * ratio), int(img.height * ratio)), Image.LANCZOS)
+    # Step 1: Upscale aggressively — OCR needs big, clear text
+    target_width = 2000
+    if img.width < target_width:
+        ratio = target_width / img.width
+        new_w = int(img.width * ratio)
+        new_h = int(img.height * ratio)
+        img = img.resize((new_w, new_h), Image.LANCZOS)
 
-    # Enhance contrast
+    # Step 2: Auto-contrast (normalizes brightness across the image)
+    img = ImageOps.autocontrast(img, cutoff=1)
+
+    # Step 3: Increase sharpness (makes text edges crisp)
+    enhancer = ImageEnhance.Sharpness(img)
+    img = enhancer.enhance(2.0)
+
+    # Step 4: Boost contrast (makes text stand out from background)
     enhancer = ImageEnhance.Contrast(img)
-    img = enhancer.enhance(1.3)
+    img = enhancer.enhance(1.8)
 
-    # Sharpen
-    img = img.filter(ImageFilter.SHARPEN)
+    # Step 5: Slight brightness boost (trade screenshots are often dark)
+    enhancer = ImageEnhance.Brightness(img)
+    img = enhancer.enhance(1.2)
 
-    # Convert to JPEG bytes
+    # Convert to PNG bytes (lossless, better for OCR than JPEG)
     buf = io.BytesIO()
-    img.save(buf, format="JPEG", quality=80)
+    img.save(buf, format="PNG")
     buf.seek(0)
-    return buf.getvalue()
+    img_bytes = buf.getvalue()
+
+    # If PNG is over 1MB (API limit), fall back to high-quality JPEG
+    if len(img_bytes) > 1024 * 1024:
+        # Reduce size slightly
+        max_width = 1600
+        if img.width > max_width:
+            ratio = max_width / img.width
+            img = img.resize((int(img.width * ratio), int(img.height * ratio)), Image.LANCZOS)
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=95)
+        buf.seek(0)
+        img_bytes = buf.getvalue()
+
+    return img_bytes
 
 
 def ocr_with_api(image_path: str, api_key: str) -> str:
-    """Extract text from image using free ocr.space API."""
+    """
+    Extract text from image using free ocr.space API.
+    Tries Engine 2 first (better for screenshots), falls back to Engine 1.
+    """
     img_bytes = preprocess_image(image_path)
+    file_ext = "png" if img_bytes[:4] == b'\x89PNG' else "jpg"
+    mime = "image/png" if file_ext == "png" else "image/jpeg"
 
+    # Try Engine 2 first (better for screenshots and complex layouts)
+    text = _call_api(img_bytes, api_key, engine="2", mime=mime, ext=file_ext)
+
+    # If Engine 2 got very little text, try Engine 1 as fallback
+    if len(text.strip()) < 10:
+        text2 = _call_api(img_bytes, api_key, engine="1", mime=mime, ext=file_ext)
+        if len(text2.strip()) > len(text.strip()):
+            text = text2
+
+    return text.strip()
+
+
+def _call_api(img_bytes: bytes, api_key: str, engine: str, mime: str, ext: str) -> str:
+    """Make a single OCR API call."""
     resp = requests.post(
         OCR_API_URL,
-        files={"file": ("image.jpg", img_bytes, "image/jpeg")},
+        files={"file": (f"image.{ext}", img_bytes, mime)},
         data={
             "apikey": api_key,
             "language": "eng",
             "isOverlayRequired": False,
-            "OCREngine": "2",  # Engine 2 is better for screenshots
+            "OCREngine": engine,
+            "scale": True,           # Let API also upscale
+            "isTable": True,         # Better for tabular trade data
+            "detectOrientation": True,
         },
-        timeout=30,
+        timeout=60,
     )
 
     if resp.status_code != 200:
@@ -82,8 +132,7 @@ def ocr_with_api(image_path: str, api_key: str) -> str:
     if not parsed:
         return ""
 
-    text = parsed[0].get("ParsedText", "")
-    return text.strip()
+    return parsed[0].get("ParsedText", "")
 
 
 class ImageProcessor:
@@ -108,9 +157,10 @@ class ImageProcessor:
             print("=" * 55)
             raise SystemExit(1)
 
-    def process_all_images(self, messages: list = None) -> list:
+    def process_all_images(self, messages: list = None, fresh: bool = False) -> list:
         """
         Process all images via OCR API.
+        Set fresh=True to delete old results and start over.
         Supports resume — rerunning skips already-processed images.
         """
         if messages is None:
@@ -132,6 +182,13 @@ class ImageProcessor:
             return []
 
         print(f"Processing {len(image_tasks)} images via ocr.space API...")
+        print(f"  Preprocessing: upscale to 2000px, auto-contrast, sharpen, boost")
+        print(f"  OCR: Engine 2 (screenshots) with Engine 1 fallback")
+
+        # Fresh start: delete old results
+        if fresh and self.results_file.exists():
+            self.results_file.unlink()
+            print("  Deleted old OCR results — starting fresh")
 
         # Load existing results to support resume
         existing_results = self._load_existing_results()
@@ -177,12 +234,14 @@ class ImageProcessor:
             if len(results) % 25 == 0:
                 self._save_results(results)
 
-            # Rate limit: free tier allows ~500 calls/day
-            # ~1.5 seconds between calls is safe
-            time.sleep(1.5)
+            # Rate limit: ~1.5 seconds between calls to stay safe
+            # Using both engines doubles API calls, so slightly longer wait
+            time.sleep(2)
 
         self._save_results(results)
-        print(f"\nDone! Processed {len(results)} images ({errors} errors)")
+        good = sum(1 for r in results if r.get("ocr_text"))
+        print(f"\nDone! Processed {len(results)} images")
+        print(f"  Text extracted: {good} | Empty/errors: {len(results) - good}")
         print(f"Results saved to: {self.results_file}")
 
         return results
