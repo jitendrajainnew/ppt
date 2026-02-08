@@ -43,8 +43,25 @@ OCR_API_KEY = os.getenv("OCR_API_KEY", "")
 # ── Trade parsing settings ────────────────────────────────────
 # Common stock/option symbols to look for (add more as needed)
 KNOWN_SYMBOLS = [
-    "NIFTY", "BANKNIFTY", "FINNIFTY", "SENSEX",
-    "NIFTY50", "BNF", "NF",
+    # Index options
+    "NIFTY", "BANKNIFTY", "FINNIFTY", "SENSEX", "NIFTY50", "BNF", "NF",
+    "MIDCPNIFTY", "BANKEX",
+    # Large cap stocks (NSE)
+    "RELIANCE", "TCS", "HDFCBANK", "INFY", "ICICIBANK", "HINDUNILVR",
+    "SBIN", "BHARTIARTL", "ITC", "KOTAKBANK", "LT", "HCLTECH",
+    "AXISBANK", "ASIANPAINT", "MARUTI", "SUNPHARMA", "TITAN",
+    "BAJFINANCE", "BAJFINSV", "WIPRO", "ONGC", "NTPC", "POWERGRID",
+    "TATAMOTORS", "TATASTEEL", "ADANIENT", "ADANIPORTS", "ULTRACEMCO",
+    "JSWSTEEL", "TECHM", "INDUSINDBK", "HINDALCO", "COALINDIA",
+    "DRREDDY", "CIPLA", "APOLLOHOSP", "EICHERMOT", "GRASIM",
+    "DIVISLAB", "BPCL", "BRITANNIA", "HEROMOTOCO", "NESTLEIND",
+    "SBILIFE", "HDFCLIFE", "TATACONSUM", "M&M", "BAJAJ-AUTO",
+    "DABUR", "PIDILITIND", "HAVELLS", "BIOCON", "GODREJCP",
+    "DLF", "IRCTC", "ZOMATO", "PAYTM", "DMART",
+    "PNB", "CANBK", "BANKBARODA", "IDFCFIRSTB", "FEDERALBNK",
+    "TATAPOWER", "VEDL", "SAIL", "NMDC", "GAIL",
+    "IOC", "MRF", "SIEMENS", "ABB", "HAL",
+    "BEL", "BHEL", "RECLTD", "PFC", "NHPC",
 ]
 
 # Trade keywords
