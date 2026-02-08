@@ -2,13 +2,9 @@
 telethon>=1.34.0
 aiohttp>=3.9.0
 
-# OCR and image processing
+# OCR and image processing (lightweight, no PyTorch needed)
 Pillow>=10.0.0
-surya-ocr>=0.6.0
-
-# Optional OCR engines (install manually if needed):
-# pip install pytesseract   (requires system tesseract)
-# pip install easyocr       (requires PyTorch, heavy)
+rapidocr-onnxruntime>=1.3.0
 
 # Data processing
 pandas>=2.1.0
