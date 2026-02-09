@@ -84,21 +84,13 @@ def preprocess_image(image_path: str) -> bytes:
 def ocr_with_api(image_path: str, api_key: str) -> str:
     """
     Extract text from image using free ocr.space API.
-    Tries Engine 2 first (better for screenshots), falls back to Engine 1.
+    Uses Engine 2 only (1 API call per image to conserve quota).
     """
     img_bytes = preprocess_image(image_path)
     file_ext = "png" if img_bytes[:4] == b'\x89PNG' else "jpg"
     mime = "image/png" if file_ext == "png" else "image/jpeg"
 
-    # Try Engine 2 first (better for screenshots and complex layouts)
     text = _call_api(img_bytes, api_key, engine="2", mime=mime, ext=file_ext)
-
-    # If Engine 2 got very little text, try Engine 1 as fallback
-    if len(text.strip()) < 10:
-        text2 = _call_api(img_bytes, api_key, engine="1", mime=mime, ext=file_ext)
-        if len(text2.strip()) > len(text.strip()):
-            text = text2
-
     return text.strip()
 
 
@@ -183,7 +175,7 @@ class ImageProcessor:
 
         print(f"Processing {len(image_tasks)} images via ocr.space API...")
         print(f"  Preprocessing: upscale to 2000px, auto-contrast, sharpen, boost")
-        print(f"  OCR: Engine 2 (screenshots) with Engine 1 fallback")
+        print(f"  OCR: Engine 2 (1 call per image to save API quota)")
 
         # Fresh start: delete old results
         if fresh and self.results_file.exists():
@@ -247,10 +239,18 @@ class ImageProcessor:
         return results
 
     def _load_existing_results(self) -> list:
-        """Load existing OCR results for resume support."""
+        """Load existing OCR results for resume support.
+        Removes failed results (HTTP 403, timeouts) so they get retried."""
         if self.results_file.exists():
             with open(self.results_file, "r") as f:
-                return json.load(f)
+                all_results = json.load(f)
+            # Keep only successful results (has text or genuinely empty)
+            good = [r for r in all_results if not r.get("error")]
+            if len(good) < len(all_results):
+                removed = len(all_results) - len(good)
+                print(f"  Removed {removed} failed results (will retry)")
+                self._save_results(good)
+            return good
         return []
 
     def _save_results(self, results: list):
