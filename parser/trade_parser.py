@@ -46,7 +46,7 @@ class TradeParser:
         re.IGNORECASE,
     )
     STRIKE_PATTERN = re.compile(
-        r"\b(\d{4,6})\s*(CE|PE|CALL|PUT)\b", re.IGNORECASE
+        r"\b(\d{2,6})\s*(CE|PE|CALL|PUT)\b", re.IGNORECASE
     )
     # Catch ANY word before strike+CE/PE (e.g. "RELIANCE 2500 CE", "TATAPOWER 450 PE")
     SYMBOL_STRIKE_PATTERN = re.compile(

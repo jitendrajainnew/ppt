@@ -21,7 +21,7 @@ ppt/
 ├── scraper/
 │   └── telegram_scraper.py # Telegram API + web fallback scraper
 ├── ocr/
-│   └── image_processor.py  # OCR pipeline (Tesseract / EasyOCR)
+│   └── image_processor.py  # OCR pipeline (ocr.space free API)
 ├── parser/
 │   └── trade_parser.py     # Regex-based trade data extractor
 ├── analysis/
@@ -55,6 +55,8 @@ python main.py all --web
 python main.py scrape          # Scrape via Telethon API
 python main.py scrape --web    # Scrape via public web preview
 python main.py ocr             # Run OCR on downloaded images
+python main.py ocr --fresh     # Delete old results, start over
+python main.py ocr --limit 5   # OCR only first 5 images (for testing)
 python main.py parse           # Parse trade data from text + OCR
 python main.py analyze         # Generate stats, Excel report, charts
 python main.py all             # Run full pipeline
@@ -66,7 +68,7 @@ python main.py all --web       # Full pipeline with web scraper
 The pipeline has 4 sequential stages:
 
 1. **Scrape** (`scraper/telegram_scraper.py`) — Downloads messages + images from the Telegram channel. Two modes: Telethon API (full access, needs credentials) and web scraper (public channels only, no credentials).
-2. **OCR** (`ocr/image_processor.py`) — Extracts text from trade screenshot images. Supports Tesseract and EasyOCR. Includes image preprocessing (grayscale, contrast, sharpen). Supports resume.
+2. **OCR** (`ocr/image_processor.py`) — Extracts text from trade screenshot images using the free ocr.space API (no local OCR deps needed). Includes image preprocessing (upscale to 2000px, auto-contrast, sharpen, brightness boost). Supports resume — reruns skip already-processed images and auto-retry failed ones.
 3. **Parse** (`parser/trade_parser.py`) — Uses regex patterns to extract structured trade fields (symbol, strike, entry/exit price, SL, target, instrument type, etc.) from message text and OCR text. Merges data from both sources.
 4. **Analyze** (`analysis/analyzer.py`) — Computes stats (win rate, P&L, risk-reward, streaks, time analysis), generates Excel report with multiple sheets, and produces matplotlib charts.
 
@@ -76,14 +78,14 @@ Data flows as JSON between stages: `messages.json` → `ocr_results.json` → `t
 
 - **Language:** Python 3.8+
 - **Config:** All settings in `config.py`, loaded from `.env` via `python-dotenv`
-- **Data storage:** JSON files in `data/` directory (git-ignored)
-- **OCR engines:** Configurable via `OCR_ENGINE` env var (`easyocr` or `tesseract`)
+- **Data storage:** JSON files in `data/` directory (tracked in git for remote access)
+- **OCR:** Uses free ocr.space API (25,000 req/month). Get key at https://ocr.space/ocrapi/freekey
 - **Trade parsing:** Regex-based, tuned for Indian options market (NIFTY, BANKNIFTY, CE/PE)
 
 ## Notes for AI Assistants
 
 - Always read this file at the start of a session to understand current project state
-- The `data/` directory is git-ignored; all runtime data lives there
+- The `data/` directory is tracked in git; runtime data (messages, images, OCR results) lives there
 - Never commit `.env` or `*.session` files (contain credentials)
 - The trade parser regex patterns in `parser/trade_parser.py` are the key area for tuning accuracy
 - `config.py` has `KNOWN_SYMBOLS`, `BUY_KEYWORDS`, `SELL_KEYWORDS` lists that can be extended
