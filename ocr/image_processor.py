@@ -1,10 +1,8 @@
 """
 OCR pipeline for extracting text from trade screenshot images.
-Uses free ocr.space API — no local OCR libraries needed.
-Just needs requests + Pillow (already installed).
-
-Get your free API key at: https://ocr.space/ocrapi/freekey
-Free tier: 25,000 requests/month (plenty for 6000 images).
+Supports two backends:
+  1. Local Tesseract (fast, no API limits — preferred if installed)
+  2. Free ocr.space API (fallback, 25k req/month)
 """
 
 import io
@@ -17,6 +15,13 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 from tqdm import tqdm
 
 import config
+
+# Check if pytesseract is available
+try:
+    import pytesseract
+    HAS_TESSERACT = True
+except ImportError:
+    HAS_TESSERACT = False
 
 # Free API endpoint
 OCR_API_URL = "https://api.ocr.space/parse/image"
@@ -81,6 +86,31 @@ def preprocess_image(image_path: str) -> bytes:
     return img_bytes
 
 
+def ocr_with_tesseract(image_path: str) -> str:
+    """Extract text from image using local Tesseract OCR."""
+    img = Image.open(image_path)
+
+    if img.mode != "RGB":
+        img = img.convert("RGB")
+
+    # Upscale small images
+    if img.width < 2000:
+        ratio = 2000 / img.width
+        img = img.resize((int(img.width * ratio), int(img.height * ratio)), Image.LANCZOS)
+
+    # Preprocessing for Tesseract
+    img = ImageOps.autocontrast(img, cutoff=1)
+    enhancer = ImageEnhance.Sharpness(img)
+    img = enhancer.enhance(2.0)
+    enhancer = ImageEnhance.Contrast(img)
+    img = enhancer.enhance(1.8)
+
+    # Tesseract config: treat as single block of text, use best quality model
+    custom_config = r"--oem 3 --psm 6"
+    text = pytesseract.image_to_string(img, config=custom_config)
+    return text.strip()
+
+
 def ocr_with_api(image_path: str, api_key: str) -> str:
     """
     Extract text from image using free ocr.space API.
@@ -128,24 +158,24 @@ def _call_api(img_bytes: bytes, api_key: str, engine: str, mime: str, ext: str) 
 
 
 class ImageProcessor:
-    """Batch OCR processor using free ocr.space API."""
+    """Batch OCR processor. Uses local Tesseract if available, else ocr.space API."""
 
     def __init__(self):
         self.api_key = config.OCR_API_KEY
         self.results_file = config.OUTPUT_DIR / "ocr_results.json"
+        self.use_tesseract = HAS_TESSERACT
 
-        if not self.api_key:
+        if self.use_tesseract:
+            print("  OCR engine: Local Tesseract (fast, no API limits)")
+        elif self.api_key:
+            print("  OCR engine: ocr.space API")
+        else:
             print("=" * 55)
-            print("  OCR API KEY NEEDED (free, takes 30 seconds)")
-            print("=" * 55)
-            print()
-            print("  1. Go to: https://ocr.space/ocrapi/freekey")
-            print("  2. Enter your email")
-            print("  3. Copy the API key from the email")
-            print("  4. Add to your .env file:")
-            print("     OCR_API_KEY=your_key_here")
-            print()
-            print("  Free tier: 25,000 requests/month")
+            print("  No OCR engine available!")
+            print("  Option 1: Install tesseract locally")
+            print("    apt install tesseract-ocr && pip install pytesseract")
+            print("  Option 2: Get free API key at https://ocr.space/ocrapi/freekey")
+            print("    Then add OCR_API_KEY=your_key to .env")
             print("=" * 55)
             raise SystemExit(1)
 
@@ -173,9 +203,9 @@ class ImageProcessor:
             print("No images found to process.")
             return []
 
-        print(f"Processing {len(image_tasks)} images via ocr.space API...")
+        engine_name = "local Tesseract" if self.use_tesseract else "ocr.space API"
+        print(f"Processing {len(image_tasks)} images via {engine_name}...")
         print(f"  Preprocessing: upscale to 2000px, auto-contrast, sharpen, boost")
-        print(f"  OCR: Engine 2 (1 call per image to save API quota)")
 
         # Fresh start: delete old results
         if fresh and self.results_file.exists():
@@ -200,7 +230,10 @@ class ImageProcessor:
 
         for image_path, msg_id in tqdm(remaining, desc="OCR"):
             try:
-                text = ocr_with_api(image_path, self.api_key)
+                if self.use_tesseract:
+                    text = ocr_with_tesseract(image_path)
+                else:
+                    text = ocr_with_api(image_path, self.api_key)
                 results.append({
                     "msg_id": msg_id,
                     "image_path": image_path,
@@ -217,18 +250,18 @@ class ImageProcessor:
                 })
                 errors += 1
 
-                # If rate limited, wait and retry
+                # If rate limited (API mode), wait and retry
                 if "rate" in error_str.lower() or "limit" in error_str.lower():
                     print(f"\n  Rate limited. Waiting 60 seconds...")
                     time.sleep(60)
 
-            # Save progress every 25 images
-            if len(results) % 25 == 0:
+            # Save progress every 50 images
+            if len(results) % 50 == 0:
                 self._save_results(results)
 
-            # Rate limit: ~1.5 seconds between calls to stay safe
-            # Using both engines doubles API calls, so slightly longer wait
-            time.sleep(2)
+            # Rate limit only needed for API mode
+            if not self.use_tesseract:
+                time.sleep(2)
 
         self._save_results(results)
         good = sum(1 for r in results if r.get("ocr_text"))

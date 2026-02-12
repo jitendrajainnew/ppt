@@ -169,8 +169,16 @@ class TradeParser:
         combo_match = self.SYMBOL_STRIKE_PATTERN.search(text)
         if combo_match:
             sym = combo_match.group(1).upper()
-            # Skip common non-symbol words
-            skip_words = {"BUY", "SELL", "ABOVE", "BELOW", "NEAR", "AROUND", "TARGET", "ENTRY", "EXIT", "SL"}
+            # Skip common non-symbol words and month abbreviations
+            skip_words = {
+                "BUY", "SELL", "ABOVE", "BELOW", "NEAR", "AROUND", "TARGET", "ENTRY", "EXIT", "SL",
+                "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
+                "JANUARY", "FEBRUARY", "MARCH", "APRIL", "JUNE", "JULY", "AUGUST", "SEPTEMBER",
+                "OCTOBER", "NOVEMBER", "DECEMBER",
+                "TO", "AT", "FOR", "THE", "AND", "WITH", "FROM", "THIS", "THAT", "NOT",
+                "ALL", "ONE", "TWO", "NEW", "OLD", "BIG", "LOW", "HIGH", "UP", "DOWN",
+                "PROFIT", "LOSS", "OPEN", "CLOSE", "CLOSED", "HIT", "DONE", "BOOK", "BOOKED",
+            }
             if sym not in skip_words:
                 trade.symbol = sym
                 trade.strike_price = float(combo_match.group(2))
