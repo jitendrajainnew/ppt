@@ -25,6 +25,9 @@ env/
 *.swp
 *.swo
 
+# SlideGen output (generated HTML files)
+slidegen/output/*.html
+
 # OS
 .DS_Store
 Thumbs.db
