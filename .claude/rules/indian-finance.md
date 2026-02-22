@@ -1,0 +1,11 @@
+- Indian number formatting: ₹1,23,456.78 (lakh/crore system)
+- XIRR for SIPs, CAGR for lumpsum > 1yr, absolute for < 1yr
+- NAV = Net Asset Value (4 decimal places)
+- SIP = Systematic Investment Plan (recurring monthly)
+- CAMS/KFintech = registrars holding transaction data
+- MFU = Mutual Fund Utilities, BSE Star = BSE's MF platform
+- AMFI = Association of Mutual Funds in India
+- ARN = AMFI Registration Number (MFD identifier)
+- EUIN = Employee Unique Identification Number
+- CAN = Common Account Number (client ID in MFU)
+- PAN = Permanent Account Number (must always be masked in UI)
