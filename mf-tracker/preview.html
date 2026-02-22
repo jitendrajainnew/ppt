@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=414, initial-scale=1.0">
+<title>MF Tracker — Interface Preview</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F1F5F9; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; padding: 32px; }
+
+  .phone {
+    width: 375px; height: 812px; background: #fff; border-radius: 40px;
+    border: 8px solid #1E293B; overflow: hidden; position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15); flex-shrink: 0;
+  }
+  .phone::before {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 150px; height: 28px; background: #1E293B; border-radius: 0 0 16px 16px; z-index: 10;
+  }
+  .screen { height: 100%; overflow-y: auto; padding-top: 44px; }
+  .screen::-webkit-scrollbar { display: none; }
+
+  .header { padding: 12px 20px; font-size: 18px; font-weight: 700; color: #0F172A; border-bottom: 1px solid #E2E8F0; background: #fff; position: sticky; top: 0; z-index: 5; }
+
+  /* Tab Bar */
+  .tab-bar {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: #fff; border-top: 1px solid #E2E8F0; display: flex;
+    justify-content: space-around; align-items: center; padding-bottom: 8px; z-index: 10;
+  }
+  .tab { text-align: center; font-size: 10px; color: #94A3B8; font-weight: 600; cursor: pointer; }
+  .tab.active { color: #1A56DB; }
+  .tab-icon { font-size: 22px; margin-bottom: 2px; }
+
+  /* Login Screen */
+  .login-content { padding: 0 24px; display: flex; flex-direction: column; justify-content: center; height: calc(100% - 44px); }
+  .login-title { font-size: 32px; font-weight: 700; color: #1A56DB; margin-bottom: 8px; }
+  .login-subtitle { font-size: 16px; color: #64748B; line-height: 1.5; margin-bottom: 48px; }
+  .label { font-size: 14px; font-weight: 600; color: #0F172A; margin-bottom: 8px; }
+  .phone-row { display: flex; gap: 8px; margin-bottom: 20px; }
+  .country-code { background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 16px; font-size: 16px; font-weight: 600; color: #0F172A; }
+  .phone-input { flex: 1; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 16px; font-size: 16px; color: #0F172A; letter-spacing: 1px; outline: none; }
+  .btn-primary { background: #1A56DB; color: #fff; border: none; border-radius: 12px; padding: 16px; font-size: 16px; font-weight: 600; width: 100%; cursor: pointer; }
+  .btn-primary:hover { background: #1E40AF; }
+  .disclaimer { text-align: center; font-size: 12px; color: #94A3B8; margin-top: 32px; line-height: 1.5; }
+
+  /* OTP Screen */
+  .otp-content { padding: 16px 24px; }
+  .back-link { font-size: 16px; color: #1A56DB; font-weight: 500; margin-bottom: 32px; cursor: pointer; }
+  .otp-title { font-size: 28px; font-weight: 700; color: #0F172A; margin-bottom: 8px; }
+  .otp-subtitle { font-size: 15px; color: #64748B; line-height: 1.5; margin-bottom: 32px; }
+  .otp-phone { font-weight: 600; color: #0F172A; }
+  .otp-row { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 32px; }
+  .otp-input { width: 48px; height: 56px; border-radius: 12px; border: 1.5px solid #E2E8F0; background: #F1F5F9; text-align: center; font-size: 22px; font-weight: 700; color: #0F172A; outline: none; }
+  .otp-input.filled { border-color: #1A56DB; background: #EFF6FF; }
+  .resend { text-align: center; font-size: 14px; color: #1A56DB; margin-top: 16px; cursor: pointer; }
+
+  /* Portfolio Card */
+  .portfolio-card {
+    background: linear-gradient(135deg, #1A56DB 0%, #3B82F6 100%);
+    border-radius: 20px; padding: 24px; margin: 8px 16px 16px; color: #fff;
+  }
+  .pc-label { font-size: 14px; opacity: 0.7; margin-bottom: 4px; }
+  .pc-value { font-size: 32px; font-weight: 700; margin-bottom: 20px; font-variant-numeric: tabular-nums; }
+  .pc-row { display: flex; justify-content: space-between; }
+  .pc-sub-label { font-size: 12px; opacity: 0.6; margin-bottom: 2px; }
+  .pc-sub-value { font-size: 16px; font-weight: 600; }
+  .pc-returns { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .returns-badge { font-size: 12px; font-weight: 700; padding: 2px 6px; border-radius: 6px; }
+  .returns-positive { background: #DCFCE7; color: #22C55E; }
+  .returns-negative { background: #FEE2E2; color: #EF4444; }
+
+  /* Holdings */
+  .holding-row { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #E2E8F0; }
+  .holding-icon { width: 40px; height: 40px; border-radius: 20px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: #1A56DB; flex-shrink: 0; }
+  .holding-info { flex: 1; margin: 0 12px; }
+  .holding-name { font-size: 14px; font-weight: 600; color: #0F172A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .holding-cat { font-size: 12px; color: #64748B; margin-top: 2px; }
+  .holding-vals { text-align: right; }
+  .holding-amt { font-size: 14px; font-weight: 600; color: #0F172A; font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+
+  /* SIP Card */
+  .sip-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 16px; margin: 0 16px 12px; }
+  .sip-header { display: flex; justify-content: space-between; margin-bottom: 14px; }
+  .sip-name { font-size: 15px; font-weight: 600; color: #0F172A; }
+  .sip-amc { font-size: 12px; color: #64748B; margin-top: 2px; }
+  .status-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; height: fit-content; }
+  .status-active { background: #DCFCE7; color: #22C55E; }
+  .status-paused { background: #FEF3C7; color: #F59E0B; }
+  .sip-details { display: flex; justify-content: space-between; }
+  .sip-detail-label { font-size: 11px; color: #94A3B8; margin-bottom: 2px; }
+  .sip-detail-value { font-size: 13px; font-weight: 600; color: #0F172A; }
+
+  /* Goal Card */
+  .goal-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 16px; margin: 0 16px 12px; }
+  .goal-header { display: flex; align-items: center; margin-bottom: 14px; }
+  .goal-icon { font-size: 28px; margin-right: 12px; }
+  .goal-name { font-size: 16px; font-weight: 600; color: #0F172A; }
+  .goal-time { font-size: 12px; color: #64748B; margin-top: 2px; }
+  .progress-bar { height: 6px; background: #F1F5F9; border-radius: 3px; margin-bottom: 14px; overflow: hidden; }
+  .progress-fill { height: 100%; background: #1A56DB; border-radius: 3px; }
+  .goal-amounts { display: flex; justify-content: space-between; }
+  .goal-amt-label { font-size: 11px; color: #94A3B8; margin-bottom: 2px; }
+  .goal-amt-value { font-size: 15px; font-weight: 700; color: #0F172A; font-variant-numeric: tabular-nums; }
+  .goal-amt-right { text-align: right; }
+
+  /* Profile */
+  .profile-header { text-align: center; padding: 32px 0; border-bottom: 1px solid #E2E8F0; }
+  .profile-avatar { width: 72px; height: 72px; border-radius: 36px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 32px; color: #1A56DB; margin: 0 auto 12px; }
+  .profile-phone { font-size: 16px; font-weight: 600; color: #0F172A; }
+  .menu-item { display: flex; align-items: center; padding: 16px 20px; border-bottom: 1px solid #E2E8F0; cursor: pointer; }
+  .menu-item:hover { background: #F8FAFC; }
+  .menu-icon { font-size: 20px; margin-right: 14px; }
+  .menu-label { flex: 1; font-size: 15px; color: #0F172A; }
+  .menu-arrow { font-size: 16px; color: #94A3B8; }
+  .signout { display: flex; align-items: center; padding: 16px 20px; margin-top: 16px; cursor: pointer; }
+  .signout-icon { font-size: 20px; margin-right: 14px; color: #EF4444; }
+  .signout-text { font-size: 15px; color: #EF4444; font-weight: 600; }
+
+  /* Empty State */
+  .empty-state { text-align: center; padding: 48px 32px; }
+  .empty-icon { font-size: 56px; opacity: 0.4; margin-bottom: 16px; }
+  .empty-title { font-size: 18px; font-weight: 600; color: #0F172A; margin-bottom: 8px; }
+  .empty-msg { font-size: 14px; color: #64748B; line-height: 1.5; margin-bottom: 24px; }
+  .btn-small { background: #1A56DB; color: #fff; border: none; border-radius: 10px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; }
+
+  /* Screen label */
+  .screen-label {
+    position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+    font-size: 13px; font-weight: 600; color: #64748B; white-space: nowrap;
+  }
+  .phone-wrap { position: relative; padding-top: 36px; }
+</style>
+</head>
+<body>
+
+<!-- 1. LOGIN -->
+<div class="phone-wrap">
+  <div class="screen-label">Login</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="login-content">
+        <div>
+          <div class="login-title">MF Tracker</div>
+          <div class="login-subtitle">Track your mutual fund portfolio, SIPs, and goals</div>
+        </div>
+        <div>
+          <div class="label">Mobile Number</div>
+          <div class="phone-row">
+            <div class="country-code">+91</div>
+            <input class="phone-input" placeholder="Enter 10-digit number" value="98765 43210">
+          </div>
+          <button class="btn-primary">Get OTP</button>
+        </div>
+        <div class="disclaimer">By continuing, you agree to our Terms of Service and Privacy Policy</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. OTP -->
+<div class="phone-wrap">
+  <div class="screen-label">OTP Verification</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="otp-content">
+        <div class="back-link">&larr; Back</div>
+        <div class="otp-title">Verify OTP</div>
+        <div class="otp-subtitle">Enter the 6-digit code sent to<br><span class="otp-phone">+91 98765 43210</span></div>
+        <div class="otp-row">
+          <input class="otp-input filled" value="4" maxlength="1">
+          <input class="otp-input filled" value="7" maxlength="1">
+          <input class="otp-input filled" value="2" maxlength="1">
+          <input class="otp-input filled" value="9" maxlength="1">
+          <input class="otp-input" value="" maxlength="1">
+          <input class="otp-input" value="" maxlength="1">
+        </div>
+        <button class="btn-primary">Verify &amp; Continue</button>
+        <div class="resend">Didn't receive code? Resend OTP</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. PORTFOLIO -->
+<div class="phone-wrap">
+  <div class="screen-label">Portfolio (Home Tab)</div>
+  <div class="phone">
+    <div class="screen" style="padding-bottom: 70px;">
+      <div class="header">Portfolio</div>
+      <div class="portfolio-card">
+        <div class="pc-label">Current Value</div>
+        <div class="pc-value">&#8377;8,45,230.50</div>
+        <div class="pc-row">
+          <div>
+            <div class="pc-sub-label">Invested</div>
+            <div class="pc-sub-value">&#8377;7.2L</div>
+          </div>
+          <div>
+            <div class="pc-sub-label" style="text-align:right">Returns</div>
+            <div class="pc-returns">
+              <span class="pc-sub-value" style="color:#4ADE80">&#8377;1.3L</span>
+              <span class="returns-badge returns-positive">+17.36%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="holding-row">
+        <div class="holding-icon">A</div>
+        <div class="holding-info">
+          <div class="holding-name">Axis Bluechip Fund - Growth</div>
+          <div class="holding-cat">Equity - Large Cap</div>
+        </div>
+        <div class="holding-vals">
+          <div class="holding-amt">&#8377;2,45,600</div>
+          <span class="returns-badge returns-positive">+22.40%</span>
+        </div>
+      </div>
+      <div class="holding-row">
+        <div class="holding-icon">P</div>
+        <div class="holding-info">
+          <div class="holding-name">Parag Parikh Flexi Cap Fund</div>
+          <div class="holding-cat">Equity - Flexi Cap</div>
+        </div>
+        <div class="holding-vals">
+          <div class="holding-amt">&#8377;1,89,320</div>
+          <span class="returns-badge returns-positive">+18.75%</span>
+        </div>
+      </div>
+      <div class="holding-row">
+        <div class="holding-icon">H</div>
+        <div class="holding-info">
+          <div class="holding-name">HDFC Short Term Debt Fund</div>
+          <div class="holding-cat">Debt - Short Duration</div>
+        </div>
+        <div class="holding-vals">
+          <div class="holding-amt">&#8377;1,52,000</div>
+          <span class="returns-badge returns-positive">+7.20%</span>
+        </div>
+      </div>
+      <div class="holding-row">
+        <div class="holding-icon">M</div>
+        <div class="holding-info">
+          <div class="holding-name">Mirae Asset Emerging Bluechip</div>
+          <div class="holding-cat">Equity - Large & Mid</div>
+        </div>
+        <div class="holding-vals">
+          <div class="holding-amt">&#8377;1,34,510</div>
+          <span class="returns-badge returns-positive">+15.90%</span>
+        </div>
+      </div>
+      <div class="holding-row">
+        <div class="holding-icon">S</div>
+        <div class="holding-info">
+          <div class="holding-name">SBI Small Cap Fund - Growth</div>
+          <div class="holding-cat">Equity - Small Cap</div>
+        </div>
+        <div class="holding-vals">
+          <div class="holding-amt">&#8377;1,23,800</div>
+          <span class="returns-badge returns-negative">-3.50%</span>
+        </div>
+      </div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab active"><div class="tab-icon">&#9684;</div>Portfolio</div>
+      <div class="tab"><div class="tab-icon">&#8635;</div>SIPs</div>
+      <div class="tab"><div class="tab-icon">&#9873;</div>Goals</div>
+      <div class="tab"><div class="tab-icon">&#128276;</div>Alerts</div>
+      <div class="tab"><div class="tab-icon">&#9787;</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. SIPs -->
+<div class="phone-wrap">
+  <div class="screen-label">SIPs Tab</div>
+  <div class="phone">
+    <div class="screen" style="padding-bottom: 70px;">
+      <div class="header">SIPs</div>
+      <div style="padding-top: 16px;">
+        <div class="sip-card">
+          <div class="sip-header">
+            <div>
+              <div class="sip-name">Axis Bluechip Fund - Growth</div>
+              <div class="sip-amc">Axis Mutual Fund</div>
+            </div>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <div class="sip-details">
+            <div><div class="sip-detail-label">Amount</div><div class="sip-detail-value">&#8377;5,000.00</div></div>
+            <div><div class="sip-detail-label">SIP Date</div><div class="sip-detail-value">5th of every month</div></div>
+            <div><div class="sip-detail-label">Next Due</div><div class="sip-detail-value">05-Mar-2026</div></div>
+          </div>
+        </div>
+        <div class="sip-card">
+          <div class="sip-header">
+            <div>
+              <div class="sip-name">Parag Parikh Flexi Cap Fund</div>
+              <div class="sip-amc">PPFAS Mutual Fund</div>
+            </div>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <div class="sip-details">
+            <div><div class="sip-detail-label">Amount</div><div class="sip-detail-value">&#8377;10,000.00</div></div>
+            <div><div class="sip-detail-label">SIP Date</div><div class="sip-detail-value">15th of every month</div></div>
+            <div><div class="sip-detail-label">Next Due</div><div class="sip-detail-value">15-Mar-2026</div></div>
+          </div>
+        </div>
+        <div class="sip-card">
+          <div class="sip-header">
+            <div>
+              <div class="sip-name">SBI Small Cap Fund</div>
+              <div class="sip-amc">SBI Mutual Fund</div>
+            </div>
+            <span class="status-badge status-paused">Paused</span>
+          </div>
+          <div class="sip-details">
+            <div><div class="sip-detail-label">Amount</div><div class="sip-detail-value">&#8377;3,000.00</div></div>
+            <div><div class="sip-detail-label">SIP Date</div><div class="sip-detail-value">10th of every month</div></div>
+            <div><div class="sip-detail-label">Next Due</div><div class="sip-detail-value">&mdash;</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><div class="tab-icon">&#9684;</div>Portfolio</div>
+      <div class="tab active"><div class="tab-icon">&#8635;</div>SIPs</div>
+      <div class="tab"><div class="tab-icon">&#9873;</div>Goals</div>
+      <div class="tab"><div class="tab-icon">&#128276;</div>Alerts</div>
+      <div class="tab"><div class="tab-icon">&#9787;</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. GOALS -->
+<div class="phone-wrap">
+  <div class="screen-label">Goals Tab</div>
+  <div class="phone">
+    <div class="screen" style="padding-bottom: 70px;">
+      <div class="header">Goals</div>
+      <div style="padding-top: 16px;">
+        <div class="goal-card">
+          <div class="goal-header">
+            <div class="goal-icon">&#127891;</div>
+            <div>
+              <div class="goal-name">Daughter's Education</div>
+              <div class="goal-time">8y 3m left</div>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 32%"></div></div>
+          <div class="goal-amounts">
+            <div><div class="goal-amt-label">Current</div><div class="goal-amt-value">&#8377;9.6L</div></div>
+            <div class="goal-amt-right"><div class="goal-amt-label">Target</div><div class="goal-amt-value">&#8377;30.0L</div></div>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-header">
+            <div class="goal-icon">&#127958;</div>
+            <div>
+              <div class="goal-name">Retirement Fund</div>
+              <div class="goal-time">22y 6m left</div>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 8%"></div></div>
+          <div class="goal-amounts">
+            <div><div class="goal-amt-label">Current</div><div class="goal-amt-value">&#8377;4.2L</div></div>
+            <div class="goal-amt-right"><div class="goal-amt-label">Target</div><div class="goal-amt-value">&#8377;5.0Cr</div></div>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-header">
+            <div class="goal-icon">&#128663;</div>
+            <div>
+              <div class="goal-name">New Car</div>
+              <div class="goal-time">1y 10m left</div>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+          <div class="goal-amounts">
+            <div><div class="goal-amt-label">Current</div><div class="goal-amt-value">&#8377;8.1L</div></div>
+            <div class="goal-amt-right"><div class="goal-amt-label">Target</div><div class="goal-amt-value">&#8377;12.5L</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><div class="tab-icon">&#9684;</div>Portfolio</div>
+      <div class="tab"><div class="tab-icon">&#8635;</div>SIPs</div>
+      <div class="tab active"><div class="tab-icon">&#9873;</div>Goals</div>
+      <div class="tab"><div class="tab-icon">&#128276;</div>Alerts</div>
+      <div class="tab"><div class="tab-icon">&#9787;</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. PROFILE -->
+<div class="phone-wrap">
+  <div class="screen-label">Profile Tab</div>
+  <div class="phone">
+    <div class="screen" style="padding-bottom: 70px;">
+      <div class="header">Profile</div>
+      <div class="profile-header">
+        <div class="profile-avatar">&#9787;</div>
+        <div class="profile-phone">+91 98765 43210</div>
+      </div>
+      <div>
+        <div class="menu-item"><span class="menu-icon">&#128100;</span><span class="menu-label">Personal Details</span><span class="menu-arrow">&#8250;</span></div>
+        <div class="menu-item"><span class="menu-icon">&#128196;</span><span class="menu-label">Transaction History</span><span class="menu-arrow">&#8250;</span></div>
+        <div class="menu-item"><span class="menu-icon">&#128737;</span><span class="menu-label">KYC Status</span><span class="menu-arrow">&#8250;</span></div>
+        <div class="menu-item"><span class="menu-icon">&#10067;</span><span class="menu-label">Help &amp; Support</span><span class="menu-arrow">&#8250;</span></div>
+        <div class="menu-item"><span class="menu-icon">&#8505;</span><span class="menu-label">About</span><span class="menu-arrow">&#8250;</span></div>
+      </div>
+      <div class="signout">
+        <span class="signout-icon">&#10152;</span>
+        <span class="signout-text">Sign Out</span>
+      </div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><div class="tab-icon">&#9684;</div>Portfolio</div>
+      <div class="tab"><div class="tab-icon">&#8635;</div>SIPs</div>
+      <div class="tab"><div class="tab-icon">&#9873;</div>Goals</div>
+      <div class="tab"><div class="tab-icon">&#128276;</div>Alerts</div>
+      <div class="tab active"><div class="tab-icon">&#9787;</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
