@@ -4,6 +4,30 @@ Use this to grade a deep dive before calling it finished. **Must-haves** are the
 a deep dive missing any of them is incomplete. **Strong-to-haves** separate a good deep dive
 from a great one.
 
+---
+
+## GATE 0 — The Five Mandatory Layers (research vs deck)
+
+> Pass this gate *first*. The module checklist below tells you the topics are **covered**;
+> these five layers tell you they're covered to a **professional research standard**. A deep
+> dive can tick every module box and still fail here — that's a teaching deck, not research.
+
+- [ ] **Layer A — Facts:** every material claim carries a **number + a date + a source**.
+      No undated "is rising / is bottoming" assertions. *Facts > opinions.*
+- [ ] **Layer B — Economics:** profit pools identified, **who captures them** named, and
+      **margin-migration direction** stated. Companies judged on **returns on capital**.
+- [ ] **Layer C — Cycles:** explicit **cycle position + leading indicators**, with the
+      **demand cycle separated from the stock cycle** where they diverge.
+- [ ] **Layer D — Failure Modes:** a **graveyard** (who died + why), **live tells**
+      (early-warning signs), and **base rates**. Loser playbook, not just winner playbook.
+- [ ] **Layer E — Scorecards:** a **weighted, 1–5, rankable** rubric with **≥1 company
+      scored end-to-end** to prove it's usable.
+
+**If any layer is unchecked, the write-up is "educational," not "investment research." Fix it
+before publishing.**
+
+---
+
 ## Must-haves (the minimum bar)
 - [ ] **One-line thesis** stated up front
 - [ ] **Why now** — at least 3 concrete reasons it's timely

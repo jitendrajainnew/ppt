@@ -4,9 +4,15 @@
 > Delete the prompt text in _italics_ as you replace it with your findings.
 > Grade yourself with `CHECKLIST.md` before calling it done.
 
+> **STANDING RULE — the 5 layers apply to every section below.** As you fill each module, ask:
+> **A Facts** (number + date + source?) · **B Economics** (profit pool + who captures it +
+> margin direction?) · **C Cycles** (position + leading indicators?) · **D Failure modes**
+> (graveyard + tells?) · **E Scorecards** (weighted + rankable?). A claim with no layer behind
+> it is an opinion — source it, or cut it.
+
 **One-line thesis:** _<the whole deep dive in one sentence>_
 **Story type:** ☐ Structural growth ☐ Cyclical turn ☐ Special situation ☐ Turnaround
-**Date / version:** _____
+**Date / version (data vintage):** _____  ·  **Sources current as of:** _____
 
 ---
 
@@ -86,33 +92,51 @@ _3–5 reasons it's timely + the inflection chart._
 |---|---|---|
 | | | |
 
-## 10. How to Evaluate a Business in This Sector ⭐
-_Tailor 5–8 yes/no questions that separate good economics from bad here._
-1. _____
-2. _____
-3. _____
-4. _____
-5. _____
+## 10. How to Evaluate a Business in This Sector ⭐  → Layer E
+_Tailor 5–8 criteria that separate good economics from bad, **assign weights**, and score
+1–5. This rubric must be **rankable and repeatable** — the same questions for every company._
 
+| # | Criterion (industry-specific) | Weight % | Why it matters |
+|---|---|---|---|
+| 1 | _____ | | |
+| 2 | _____ | | |
+| 3 | _____ | | |
+| 4 | _____ | | |
+| 5 | _____ | | |
+|   | **Total** | **100** | |
+
+**Scoring scale:** 1 = poor / red flag · 3 = average · 5 = best-in-class.
 **What a "good" business looks like in this industry:** _____
 
-## 11. Company Deep Dives
+## 11. Company Deep Dives  → Layer E + B
 **Tiering of the field:**
 - **Group A — Leaders:** _____
 - **Group B — Challengers / Targets:** _____
 - **Group C — Laggards / Lost the race:** _____
 
+**Scored ranking (fill from Module 10 rubric — at least ONE company scored end-to-end):**
+| Company | C1 | C2 | C3 | C4 | C5 | **Weighted score** | Rank |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
 **Per-company (repeat this block; keep layout identical for comparability):**
 
 ### Company: _____
 - **Positioning** (value-chain link, segments, scale vs peers): _____
-- **Scorecard result** (vs Module 10): _____
+- **Scorecard result** (weighted score vs Module 10): _____
 - **Balance sheet** (leverage, capex, asset base): _____
-- **P&L** (revenue growth, operating margin): _____
+- **P&L** (revenue growth, operating margin, **ROCE/ROE**): _____  ← Layer B
 - **Triggers:** _____
 - **Risks (company-specific):** _____
 
-## 12. Valuation, Triggers, Risks & Verdict
+## 12. Failure Modes — The Graveyard  → Layer D
+_Both playbooks. Who already died here, the early-warning tells, and the base rate._
+- **The graveyard (names/sub-sectors that destroyed value + the cause):** _____
+- **The recurring failure pattern in this industry:** _____
+- **Live tells (early-warning signs to watch *before* it breaks):** _____
+- **Base rate (how often the typical entrant/strategy fails here):** _____
+
+## 13. Valuation, Triggers, Risks & Verdict
 - **Valuation method used & why:** _____ (replacement cost / EV-per-unit / growth multiple /
   payback & EPS bridge)
 - **Valuation read:** _____ (and a "bubble / margin of safety" sanity check)
@@ -126,7 +150,7 @@ _Tailor 5–8 yes/no questions that separate good economics from bad here._
   | | | |
 - **Conclusion / thesis:** _____
 
-## 13. Data Sources & How to Track
+## 14. Data Sources & How to Track
 - **Primary sources / filings:** _____
 - **Industry bodies / agencies:** _____
 - **Analysts / channels / handles to follow:** _____

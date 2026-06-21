@@ -51,6 +51,50 @@ bad, and (c) you can keep it up to date yourself. The stock conclusions fall out
 
 ---
 
+## Architecture: 12 Modules × 5 Layers
+
+The framework has two axes:
+
+- **The 12 Modules** (below) are the **WHAT** — the topics every deep dive must cover.
+- **The 5 Layers** (A–E) are the **QUALITY BAR** — the standard of rigor every module must
+  clear. They are *cross-cutting*: each layer is enforced **inside every relevant module**,
+  not bolted on as summary slides at the end. (A "Facts appendix" is theatre; the discipline
+  only works if the value-chain module itself carries the Economics layer, the demand module
+  carries the Cycles layer, and so on.)
+
+**The 12 Modules are the skeleton. The 5 Layers are what separate a good *educational* deck
+from professional *investment research*.** An industry write-up that covers all 12 modules but
+fails the layers is a teaching deck; one that clears all five layers is a research framework.
+
+### The Five Mandatory Layers
+
+| Layer | The question | The enforceable bar (don't pass without this) |
+|---|---|---|
+| **A — Facts** | Is it true? | Every material claim carries a **number + a date + a source**. A number with no vintage is how you get confidently wrong. *Facts > opinions.* |
+| **B — Economics** | Where is the money? | Identify **profit pools**, **who is capturing them**, and **which way margins are migrating** (the pool *moves*). Judge on **returns on capital**, not just margins. |
+| **C — Cycles** | When are we? | State **cycle position + leading indicators to watch**, and separate the **demand cycle from the stock cycle** (they often diverge — e.g. pharma demand is flat but stocks ride the patent-cliff + regulatory cycle). |
+| **D — Failure Modes** | How does value die? | Document the **graveyard (who already died and why)**, the **live tells (early-warning signs)**, and **base rates**. Carry *both* winner and loser playbooks. |
+| **E — Scorecards** | Who's best, objectively? | A **weighted, 1–5 scored, rankable, repeatable** rubric — with **≥1 company scored end-to-end** as proof it's usable, not decorative. |
+
+### Module × Layer — which layer carries which module
+
+Every module should consciously clear all five, but each module *leans* on one or two:
+
+| Module | Lead layer(s) |
+|---|---|
+| 1 Why now · 8 Demand/supply | **C — Cycles** (+ A) |
+| 3 How it's made · 5 Value chain | **B — Economics** (+ A) |
+| 4 Segments · 6 Structure · 7 Geography | **B** + **A** |
+| 10 Evaluate-a-business · 11 Company deep dives | **E — Scorecards** (+ B) |
+| 12 Risks / Triggers / Verdict | **D — Failure Modes** (+ C) |
+| All modules, always | **A — Facts** (number + date + source) |
+
+> **Rule of enforcement:** if a slide makes a claim, ask *which layer backs it?* If the answer
+> is "none," it's an opinion — either source it (A), tie it to economics (B), date it to a
+> cycle (C), test it against the failure history (D), or drop it.
+
+---
+
 ## The Spine — 12 Modules
 
 ```
@@ -348,13 +392,21 @@ hand-waving, or all company minutiae with no structure).
 
 ## TL;DR — what it takes to make a complete deep dive
 
+**Cover the 12 modules. Clear the 5 layers on each. Done.**
+
 1. **Frame it** (scope, why now).
 2. **Explain it** (history, how it's made, segments) — pass the 5-year-old test.
-3. **Map the money** (value chain + margin map + industry structure + geography).
-4. **Locate the cycle** (demand drivers vs supply, pricing power).
-5. **Define "good"** (an evaluation scorecard) *before* looking at companies.
-6. **Score the players** (group them, then deep-dive financials/triggers/risks).
-7. **Value, catalyse, caveat, conclude** (valuation + triggers + risks + verdict).
-8. **Make it maintainable** (data sources + how to track).
+3. **Map the money** (value chain + margin map + industry structure + geography) → *Layer B*.
+4. **Locate the cycle** (demand drivers vs supply, leading indicators) → *Layer C*.
+5. **Define "good"** (a weighted scorecard) *before* looking at companies → *Layer E*.
+6. **Score the players** (rank them, then deep-dive financials/triggers/risks) → *Layer E*.
+7. **Study the graveyard** (how value dies here + live tells) → *Layer D*.
+8. **Value, catalyse, caveat, conclude** (valuation + triggers + risks + verdict).
+9. **Make it maintainable** (data sources + how to track).
 
-Facts > opinions. Always end with *your own* conviction, not someone else's tip.
+And underneath all nine: **Layer A — every material claim carries a number + a date + a
+source.** Facts > opinions. Always end with *your own* conviction, not someone else's tip.
+
+> **The one-line test for "research vs deck":** cover the 12 modules and you have an
+> *educational deck*; clear Layers A–E on every module and you have an *investment research
+> framework*.
