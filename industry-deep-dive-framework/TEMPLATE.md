@@ -1,157 +1,170 @@
 # <INDUSTRY> — Deep Dive
 
-> Copy this file to `<industry>.md` and fill it in top to bottom.
-> Delete the prompt text in _italics_ as you replace it with your findings.
-> Grade yourself with `CHECKLIST.md` before calling it done.
+> Copy to `<industry>.md`, fill top to bottom, delete the _italic_ prompts as you go.
+> This reads as a **research flow**. The five quality layers (A Facts · B Economics ·
+> C Cycles · D Failure · E Scorecards) are the standard every section is graded on —
+> they're not repeated inline here; you grade against them once at the end via `CHECKLIST.md`.
+> First, pick your **archetype** in `ARCHETYPES.md` — it tells you which modules to weight.
 
-> **STANDING RULE — the 5 layers apply to every section below.** As you fill each module, ask:
-> **A Facts** (number + date + source?) · **B Economics** (profit pool + who captures it +
-> margin direction?) · **C Cycles** (position + leading indicators?) · **D Failure modes**
-> (graveyard + tells?) · **E Scorecards** (weighted + rankable?). A claim with no layer behind
-> it is an opinion — source it, or cut it.
+**Archetype:** ☐ Commodity ☐ Technology ☐ Regulated ☐ Infrastructure ☐ Hybrid: _____
+**Data vintage / sources current as of:** _____  ·  **Version:** _____
 
-**One-line thesis:** _<the whole deep dive in one sentence>_
-**Story type:** ☐ Structural growth ☐ Cyclical turn ☐ Special situation ☐ Turnaround
-**Date / version (data vintage):** _____  ·  **Sources current as of:** _____
+---
+
+## ★ Research Question (do this BEFORE anything else)
+> The antidote to a "Wikipedia deep dive." State the *one* thing worth resolving.
+
+- **The central uncertainty:** _What is the single most important unresolved question about
+  this industry today?_ (e.g. *"Is solar module manufacturing commoditising while developers
+  capture the value?"* / *"Is AI a multi-year HBM supercycle or a 2-year spike?"*)
+- **Why the answer matters (the payoff):** _____
+- **What evidence would PROVE it:** _____
+- **What evidence would DISPROVE it:** _____
+- **One-line thesis (provisional answer):** _____
+- **Story type:** ☐ Structural growth ☐ Cyclical turn ☐ Special situation ☐ Turnaround
 
 ---
 
 ## 0. Frame & Disclaimer
-- **Scope (what's in / out):** _____
-- **Who this is for:** _____
+- **Scope (in / out):** _____   **Who it's for:** _____
 - **Disclaimer:** _Not investment advice. Educational. Do your own due diligence._
-- **Agenda:** _list the sections you'll actually cover_
+- **Agenda:** _____
 
 ## 1. Why This Industry, Why Now
-_3–5 reasons it's timely + the inflection chart._
-1. _____
-2. _____
-3. _____
+_3–5 reasons it's timely + the inflection. Each with a number + date._
+1. _____  2. _____  3. _____
 
 ## 2. What It Is & History
 - **Plain definition (5-year-old test):** _____
-- **Origin / kickoff event:** _____
+- **Origin event:** _____
 - **Eras / timeline:**
   | Era / Year | What happened | Why it matters today |
   |---|---|---|
   | | | |
 
-## 3. How It Works / How It's Made (Tech 101)
-- **Process flow:** _input → … → output_
-- **Raw material inputs & cost stack:**
+## 3. How It Works / How It's Made
+- **Process / pipeline flow:** _input → … → end output_
+- **Raw-material / cost stack:**
   | Input | % of cost | Sourcing risk |
   |---|---|---|
   | | | |
 - **Core technology & where it's heading (next-gen):** _____
 
-## 4. Types / Segments / Classifications
-| Segment / Type | What it is | Who uses it | Cost/performance | Growing / declining |
-|---|---|---|---|---|
-| | | | | |
-
-## 5. Value Chain & Margin Map ⭐
-**Chain:** _Stage 1 → Stage 2 → … → End customer_
-
-| Stage | Margin | Capital intensity | Competition | Innovation room | Recurring? | Verdict |
-|---|---|---|---|---|---|---|
-| | | | | | | |
-
-- **Where is maximum value captured?** _____
-- **Where is value destroyed?** _____
-- **Who is integrating (backward/forward) and why?** _____
-
-## 6. Industry Structure & Competitive Forces
-- **Concentration:** ☐ Oligopoly ☐ Consolidating ☐ Fragmented
-- **Porter's Five Forces:**
-  | Force | Rating (Low/Med/High) | Notes |
-  |---|---|---|
-  | Rivalry | | |
-  | Threat of new entrants | | |
-  | Threat of substitutes | | |
-  | Supplier power | | |
-  | Buyer power | | |
-- **Where the know-how / IP sits:** _____
-- **Barriers to entry:** _____
-- **Key global players:** _____
-
-## 7. Geography & Markets
-| Region | Market size | Growth | Policy stance | Producer or consumer | Case study |
+## 4. Types / Segments
+| Segment | What it is | Who uses it | Economics | **Tell metric** | Growing/declining |
 |---|---|---|---|---|---|
 | | | | | | |
 
-- **Home market (India) position:** ☐ Importer ☐ Emerging producer ☐ Future exporter — _notes_
+## 5. Value Chain & Margin Map ⭐
+**Chain:** _Stage 1 → … → end customer_
+| Stage | Margin | Capital intensity | Competition | Recurring? | **Who captures it** | Margin migrating ↑/↓ |
+|---|---|---|---|---|---|---|
+| | | | | | | |
+- **Max value captured / value destroyed:** _____
+- **Who is integrating (back/forward) and why:** _____
 
-## 8. Demand Drivers & Supply Dynamics
-- **Structural demand drivers:** _____
-- **Supply situation (capacity, lead times, booked-out?):** _____
+## 6. Industry Structure & Forces
+- **Concentration:** ☐ Oligopoly ☐ Consolidating ☐ Fragmented
+- **Porter's 5 forces:** Rivalry _ · New entrants _ · Substitutes _ · Supplier power _ · Buyer power _
+- **Where know-how / IP sits:** _____   **Barriers to entry:** _____   **Key global players:** _____
+
+## 7. Geography & Markets
+| Region | Size + growth (dated) | Policy stance | Producer or consumer | Case study |
+|---|---|---|---|---|
+| | | | | |
+- **Home market (India) position:** ☐ Importer ☐ Emerging producer ☐ Future exporter
+
+## 8. Demand, Supply & Cycle — with the **Cycle Dashboard** ⭐
+- **Demand drivers:** _____   **Supply situation (capacity, lead times):** _____
 - **Cycle position:** ☐ Bottom ☐ Expansion ☐ Peak ☐ Glut — _why_
-- **Pricing power:** ☐ Rising ☐ Flat ☐ Falling
+- **Demand cycle vs STOCK cycle** (do they diverge? what really moves the stocks?): _____
+- **CYCLE DASHBOARD — the reusable monitoring system (the "tell" metrics):**
+  | Indicator | Current (dated) | 5Y avg | Direction ↑/→/↓ | What it signals |
+  |---|---|---|---|---|
+  | | | | | |
+  | | | | | |
+  | | | | | |
 
 ## 9. Regulation, Policy & Government
-| Policy / scheme / rule | Effect | Tailwind or risk? |
+| Policy / rule / body | Effect | Tailwind or risk? |
 |---|---|---|
 | | | |
 
-## 10. How to Evaluate a Business in This Sector ⭐  → Layer E
-_Tailor 5–8 criteria that separate good economics from bad, **assign weights**, and score
-1–5. This rubric must be **rankable and repeatable** — the same questions for every company._
+## 10. Management & Capital Allocation ⭐ (often the whole story in India)
+> Same industry + same cycle + same opportunity → different management → different outcome.
+| Dimension | Evidence (dated) | Score 1–5 |
+|---|---|---|
+| Acquisition record (value created/destroyed) | | |
+| Dilution / equity-raise history | | |
+| ROCE / where incremental capital is deployed | | |
+| Buybacks & dividends | | |
+| Related-party transactions / governance flags | | |
+| Promoter skin-in-the-game & track record | | |
+| **Capital Allocation Score (avg)** | | **/5** |
 
+## 11. How to Evaluate a Business in This Sector ⭐ (the weighted rubric)
 | # | Criterion (industry-specific) | Weight % | Why it matters |
 |---|---|---|---|
-| 1 | _____ | | |
-| 2 | _____ | | |
-| 3 | _____ | | |
-| 4 | _____ | | |
-| 5 | _____ | | |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
 |   | **Total** | **100** | |
+**Scale:** 1 = red flag · 3 = average · 5 = best-in-class.
+**What "good" looks like here:** _____
 
-**Scoring scale:** 1 = poor / red flag · 3 = average · 5 = best-in-class.
-**What a "good" business looks like in this industry:** _____
+## 12. Company Deep Dives (scored & ranked)
+- **Tiers:** Leaders: _____ · Challengers/Targets: _____ · Laggards: _____
+- **Scored ranking (from Module 11 rubric — score ≥1 company end-to-end):**
+  | Company | C1 | C2 | C3 | C4 | C5 | Cap-Alloc | **Weighted** | Rank |
+  |---|---|---|---|---|---|---|---|---|
+  | | | | | | | | | |
+- **Per-company block (identical layout for comparability):**
+  ### Company: _____
+  - Positioning (value-chain link, segments, scale): _____
+  - Balance sheet (leverage, capex) · P&L (growth, margin, **ROCE/ROE**): _____
+  - Triggers: _____ · Company-specific risks: _____
 
-## 11. Company Deep Dives  → Layer E + B
-**Tiering of the field:**
-- **Group A — Leaders:** _____
-- **Group B — Challengers / Targets:** _____
-- **Group C — Laggards / Lost the race:** _____
-
-**Scored ranking (fill from Module 10 rubric — at least ONE company scored end-to-end):**
-| Company | C1 | C2 | C3 | C4 | C5 | **Weighted score** | Rank |
-|---|---|---|---|---|---|---|---|
-| | | | | | | | |
-
-**Per-company (repeat this block; keep layout identical for comparability):**
-
-### Company: _____
-- **Positioning** (value-chain link, segments, scale vs peers): _____
-- **Scorecard result** (weighted score vs Module 10): _____
-- **Balance sheet** (leverage, capex, asset base): _____
-- **P&L** (revenue growth, operating margin, **ROCE/ROE**): _____  ← Layer B
-- **Triggers:** _____
-- **Risks (company-specific):** _____
-
-## 12. Failure Modes — The Graveyard  → Layer D
-_Both playbooks. Who already died here, the early-warning tells, and the base rate._
-- **The graveyard (names/sub-sectors that destroyed value + the cause):** _____
+## 13. Failure Modes — The Historical Graveyard (learn from the dead)
+- **Who died / which sub-sectors destroyed value + the cause:** _____
 - **The recurring failure pattern in this industry:** _____
-- **Live tells (early-warning signs to watch *before* it breaks):** _____
-- **Base rate (how often the typical entrant/strategy fails here):** _____
+- **Base rate (how often the typical entrant/strategy fails):** _____
 
-## 13. Valuation, Triggers, Risks & Verdict
-- **Valuation method used & why:** _____ (replacement cost / EV-per-unit / growth multiple /
-  payback & EPS bridge)
-- **Valuation read:** _____ (and a "bubble / margin of safety" sanity check)
-- **Triggers / catalysts (specific, time-bound):**
-  | Trigger | Expected timing | Impact |
+## 14. Live Risk Dashboard — what can kill the thesis TODAY (forward monitoring)
+> Pairs with the Cycle Dashboard (Module 8). Cycle Dashboard = where we are;
+> Risk Dashboard = what breaks the thesis next.
+| Thesis-killer | Current status | Tripwire (the early tell) | Severity |
+|---|---|---|---|
+| | | | |
+| | | | |
+
+## 15. Consensus vs Variant View ⭐ (where alpha lives)
+| What consensus believes | Your variant view |
+|---|---|
+| | |
+- **Evidence SUPPORTING the variant:** _____
+- **Evidence CONTRADICTING it (steelman the bears):** _____
+- **What would make you change your mind:** _____
+
+## 16. Valuation, Triggers, Verdict & Investment Fit
+- **Valuation method & why:** _____ (replacement cost / EV-per-unit / growth multiple /
+  pipeline NPV / DCF on order-book) + a **bubble / margin-of-safety** check.
+- **Triggers (specific, time-bound):**
+  | Trigger | Timing | Impact |
   |---|---|---|
   | | | |
-- **Risks:**
-  | Risk | Likelihood | Severity |
+- **Conclusion / thesis (answer the Research Question):** _____
+- **INVESTMENT FIT** (a great business can still be a bad investment — fit depends on cycle
+  position + valuation, not just quality):
+  | Archetype fit | Yes/No | At what price / cycle point? |
   |---|---|---|
-  | | | |
-- **Conclusion / thesis:** _____
+  | Compounder | | |
+  | Cyclical | | |
+  | Turnaround | | |
+  | Special situation | | |
 
-## 14. Data Sources & How to Track
-- **Primary sources / filings:** _____
-- **Industry bodies / agencies:** _____
-- **Analysts / channels / handles to follow:** _____
-- **Key recurring data to monitor (and where):** _____
+## 17. Data Sources & How to Track
+- **Primary / filings:** _____   **Industry bodies / agencies:** _____
+- **Analysts / channels / handles:** _____
+- **Monitoring cadence:** _which dashboard metrics to refresh, how often, from where_

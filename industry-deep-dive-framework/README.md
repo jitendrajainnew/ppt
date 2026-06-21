@@ -25,6 +25,7 @@ That spine — generalised and made repeatable — is this framework.
 | `README.md` (this file) | The master framework — the 12 modules, what each is for, the questions to answer, and where to get the data |
 | `TEMPLATE.md` | A blank, fill-in-the-blanks deck outline. Copy it per new industry. |
 | `CHECKLIST.md` | A one-page "is my deep dive complete?" checklist + quality bar |
+| `ARCHETYPES.md` | Industry archetypes (Commodity / Technology / Regulated / Infrastructure) + **default module weightings** — pick one before you start |
 | `EXAMPLES.md` | How each of the four source decks maps onto the framework (proof it generalises) |
 | `examples/pharma.md` | A fully worked example — the framework applied to Indian pharma, showing how 3 modules "flex" for a hard case |
 
@@ -110,9 +111,40 @@ Every module should consciously clear all five, but each module *leans* on one o
                         └──────────────┘
 ```
 
-Run the modules roughly in order. Not every industry needs every module at equal depth
-(a tech-supercycle story leans on Module 7–8; a cyclical commodity leans on Module 5 and
-10), but **every module should at least be considered**. The CHECKLIST tells you the minimum.
+Run the modules roughly in order. **Not every industry needs every module at equal depth** —
+**pick your archetype in `ARCHETYPES.md` first** (Commodity / Technology / Regulated /
+Infrastructure), which tells you which modules to over-weight. Weighting changes *depth*, not
+*coverage*: every module is still considered. The CHECKLIST tells you the minimum.
+
+> **The spine has grown.** The original 12 modules are the core; four feedback rounds added
+> the elements that separate research from a deck. The canonical, full flow now lives in
+> **`TEMPLATE.md`** (use that to write). The additions, and where they sit:
+> - **★ Research Question** — *before* everything (the central uncertainty)
+> - **Module 8 → Cycle Dashboard** — leading-indicator monitoring table
+> - **Module 10 → Management & Capital Allocation** — first-class, with its own score
+> - **Module 13/14 → Failure split** — Historical **Graveyard** (learn) + **Live Risk
+>   Dashboard** (monitor today's thesis-killers)
+> - **Module 15 → Consensus vs Variant View** — the contrarian/alpha module
+> - **Module 16 → Investment Fit** — compounder/cyclical/turnaround/special-sit, *priced to cycle*
+>
+> The descriptions below cover the original spine; the new modules are detailed in `TEMPLATE.md`.
+
+---
+
+### ★ Pre-Module — The Research Question (do this first)
+**Purpose:** The antidote to a "Wikipedia deep dive." Before describing anything, state the
+*one* uncertainty worth resolving — research is an *argument*, not an encyclopedia entry.
+
+**Key questions:**
+- What is the **single most important unresolved question** about this industry today?
+  (Solar: *"Is module-making commoditising while developers capture value?"* · Memory: *"Is
+  this a multi-year HBM supercycle or a 2-year spike?"* · Cement: *"Has consolidation
+  permanently changed pricing power?"*)
+- **Why does the answer matter** (what's the payoff if you're right)?
+- **What evidence would prove it? What would disprove it?**
+
+**Produce:** One slide: the central question, why it matters, and the prove/disprove tests.
+Everything downstream exists to answer this. The conclusion (Module 16) must close the loop.
 
 ---
 
@@ -392,21 +424,23 @@ hand-waving, or all company minutiae with no structure).
 
 ## TL;DR — what it takes to make a complete deep dive
 
-**Cover the 12 modules. Clear the 5 layers on each. Done.**
+**Ask the question. Pick the archetype. Cover the modules. Clear the 5 layers. Answer the question.**
 
+0. **Ask** the Research Question (the central uncertainty) and **tag the archetype**.
 1. **Frame it** (scope, why now).
 2. **Explain it** (history, how it's made, segments) — pass the 5-year-old test.
-3. **Map the money** (value chain + margin map + industry structure + geography) → *Layer B*.
-4. **Locate the cycle** (demand drivers vs supply, leading indicators) → *Layer C*.
-5. **Define "good"** (a weighted scorecard) *before* looking at companies → *Layer E*.
-6. **Score the players** (rank them, then deep-dive financials/triggers/risks) → *Layer E*.
-7. **Study the graveyard** (how value dies here + live tells) → *Layer D*.
-8. **Value, catalyse, caveat, conclude** (valuation + triggers + risks + verdict).
-9. **Make it maintainable** (data sources + how to track).
+3. **Map the money** (value chain + who captures the pool + margin migration).
+4. **Locate the cycle** + build the **Cycle Dashboard** of leading indicators.
+5. **Judge the jockey** (Management & Capital Allocation — score it).
+6. **Define "good"** (a weighted scorecard) *before* companies; then **score & rank** them.
+7. **Study the graveyard** (how value dies) + stand up the **Live Risk Dashboard**.
+8. **Take the other side** (Consensus vs Variant View — where alpha lives).
+9. **Value, caveat, conclude** + state **Investment Fit** (priced to cycle), answering Module 0.
+10. **Make it maintainable** (sources + monitoring cadence).
 
-And underneath all nine: **Layer A — every material claim carries a number + a date + a
-source.** Facts > opinions. Always end with *your own* conviction, not someone else's tip.
+Underneath all of it: **Layer A — every material claim carries a number + a date + a source.**
+Facts > opinions. End with *your own* conviction, not someone else's tip.
 
-> **The one-line test for "research vs deck":** cover the 12 modules and you have an
-> *educational deck*; clear Layers A–E on every module and you have an *investment research
-> framework*.
+> **The one-line test for "research vs deck":** cover the modules and you have an *educational
+> deck*; clear Layers A–E (and answer a real Research Question) and you have an *investment
+> research framework*.
