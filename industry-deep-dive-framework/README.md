@@ -27,7 +27,7 @@ That spine — generalised and made repeatable — is this framework.
 | `CHECKLIST.md` | A one-page "is my deep dive complete?" checklist + quality bar |
 | `ARCHETYPES.md` | Industry archetypes (Commodity / Technology / Regulated / Infrastructure) + **default module weightings** — pick one before you start |
 | `EXAMPLES.md` | How each of the four source decks maps onto the framework (proof it generalises) |
-| `examples/pharma.md` | A fully worked example — the framework applied to Indian pharma, showing how 3 modules "flex" for a hard case |
+| `examples/pharma.md` | **The reference implementation** — Indian pharma run through the *entire* framework (Decision Summary → Research Log), with a company (Sun Pharma) scored end-to-end, CORE/APPENDIX split, confidence tags, and the Evidence→Interpretation→Conclusion rule. Figures are illustrative. |
 
 **Workflow:** Copy `TEMPLATE.md` → rename to `<industry>.md` → work top to bottom →
 use `CHECKLIST.md` to grade completeness before you call it done.
