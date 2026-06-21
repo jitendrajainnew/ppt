@@ -40,6 +40,11 @@ collapsed to ~−0% (FY20) / 1% (FY22) during the FY19–FY22 loss streak, then 
 *Maruti FY22 ₹3,880cr is the chip/COVID profit trough — less than half its FY18 peak. M&M's FY20
 ₹−321cr loss (a one-off tax/impairment + auto downturn) marks the bottom of its turnaround; it then
 compounded to ₹14,073cr by FY25. Eicher's profit nearly **4×'d FY22→FY26ttm**.*
+*‡ Tata Motors (TMPV) shows the **full JLR cycle**: a 4-year loss streak FY19–FY22 (bottom **−₹28,724cr
+FY19**, the JLR write-down year; FY20 −₹11,975cr, FY21 −₹13,395cr, FY22 −₹11,309cr) → turnaround to
++₹31,807cr (FY24) → **+₹82,645cr (FY26ttm)**. The FY26ttm figure is **inflated by ₹86,113cr "other
+income"** (demerger/exceptional) — the underlying FY24–25 ~₹28–32k-cr is the clean earnings power. This is
+the single largest net-profit swing in the set: **−₹28,724cr → +₹82,645cr.***
 
 ## Sales (₹ cr) & operating margin
 
@@ -48,9 +53,14 @@ compounded to ₹14,073cr by FY25. Eicher's profit nearly **4×'d FY22→FY26ttm
 | **Maruti** | 152,913 | 13% | 14% → 13% (flat-to-down) | ~11.7% |
 | **M&M** | 159,211 | 19% | 12% → 19% (**+7pts, rising**) | ~8.3% |
 | **Eicher (RE)** | 18,870 | 25% | 13%* → 25% (structurally premium) | ~9.0% |
+| **Tata Motors (TMPV)** | 439,695 | 13% | 15% → 13% (JLR-led, swinging) | ~5.3%** |
 
 \* Eicher FY15 figure spans the Dec-2014 fiscal/standalone transition; the clean Royal-Enfield-era
 margin band is **25-31%** (FY17 onward) — roughly **2× the four-wheeler mass-market OPM**.
+
+\*\* Tata Motors (TMPV) is the **largest group by revenue** (~₹4.4 lakh-cr FY25, ~3× Maruti) but the
+slowest 10-yr sales CAGR (~5.3%) and the most volatile OPM (15%→7% FY20 trough→13% FY24-25→6% FY26ttm,
+demerger-distorted) — JLR drives both the scale and the swing.
 
 ## What the long-run data reveals
 
@@ -80,7 +90,18 @@ margin band is **25-31%** (FY17 onward) — roughly **2× the four-wheeler mass-
 - *Conclusion:* The clearest **premium-brand moat** in the set — structurally higher, more *stable*
   returns through the cycle. **[H]**
 
-**4. The sector is cyclical, but premiumisation is what compounds through it.**
+**4. Tata Motors (TMPV) is the deep-cyclical, JLR-driven turnaround — the highest beta in the set.**
+- *Evidence:* Net profit **−₹28,724cr (FY19)** through a 4-year loss streak (FY19–FY22) → +₹31,807cr
+  (FY24) → **+₹82,645cr (FY26ttm)**; ROCE 9% (FY18) → **−0% (FY20) / 1% (FY22)** → ~20% (FY24-25) → 3%
+  (FY26ttm, demerger-distorted). Interest cost fell ₹8,097cr (FY21) → ₹2,827cr (ttm) = real deleveraging.
+- *Interpretation:* The P&L is dominated by **JLR's global premium cycle + leverage**, not steady India-PV
+  economics — bigger swings, bigger write-downs (FY19), bigger recovery than any peer. The FY26ttm spike is
+  partly **₹86,113cr exceptional/other income** (demerger), not operating earnings; the clean read is the
+  FY24-25 ~20% ROCE / 13% OPM.
+- *Conclusion:* A **buy-on-deleveraging high-beta turnaround / SOTP** (PV + JLR + EV-arm optionality), and
+  the listed **EV-PV leader** — *not* a stability compounder. Highest reward, highest risk in the set. **[M]**
+
+**5. The sector is cyclical, but premiumisation is what compounds through it.**
 - *Evidence:* All three troughed FY20-22 (chip shortage + COVID). But the *premiumisers* (M&M's SUV/
   farm mix, Eicher's RE) held far higher trough ROCE (11% / 17%) and exited stronger, while mass-market
   Maruti's ROCE collapsed to 6% and merely *recovered* to its old range.
