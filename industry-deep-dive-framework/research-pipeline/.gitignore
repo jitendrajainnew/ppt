@@ -1,0 +1,11 @@
+# Raw corpus + extracted text are large and reproducible — regenerate via pipeline.py.
+# Commit the scripts, manifests, and synthesised notes, not the bulk documents.
+data/raw/**/*.pdf
+data/raw/**/*.zip
+data/text/**/*.txt
+# keep the link maps + download manifest (small, useful provenance)
+!data/raw/**/_links.json
+!data/raw/_manifest.json
+data/raw/**/_fetch.log
+data/text/**/_extract.log
+*.log
