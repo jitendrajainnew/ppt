@@ -24,25 +24,34 @@ writing it should feel like a **research flow**; here is where it gets graded li
 ---
 
 ## GATE 1 — Must-have modules (the minimum bar)
-- [ ] **Research Question** stated up front — the central uncertainty + what would prove/disprove it
-- [ ] **Archetype tagged** (Commodity / Technology / Regulated / Infrastructure / Hybrid)
+
+**[CORE] — the 15–20 page narrative (the argument):**
+- [ ] **Research Question** — central uncertainty + prove/disprove + **time horizon declared**
+      (trade / investment / structural)
+- [ ] **Archetype tagged** (Commodity / Technology / Regulated / Infrastructure / **Network-Platform** / Hybrid)
+      **+ archetype's mandatory deliverables present** (see `ARCHETYPES.md`)
 - [ ] **Why now** — 3+ dated reasons
 - [ ] **Plain-English definition** (5-year-old test)
 - [ ] **How it's made** — process/pipeline + cost stack
 - [ ] **Segments** broken out, each with a **tell metric**
 - [ ] **Value-chain margin map** — pools + who captures them + migration direction
+- [ ] **Industry Metrics Cheat Sheet** — the 5–10 insider ratios defined + what "good" looks like
 - [ ] **Industry structure** — concentration + barriers to entry
-- [ ] **Cycle Dashboard** — leading indicators table (current / 5Y avg / direction)
-- [ ] **Management & Capital Allocation** module with a score
+- [ ] **Cycle position** + **Second-Order Effects** chain (driver → outcome → consequence)
+- [ ] **Management & Capital Allocation** with a score
 - [ ] **Evaluation scorecard** (weighted) defined *before* company analysis
-- [ ] **2–3 company deep dives** with Balance Sheet + P&L + **ROCE/ROE**, ranked by the rubric
-- [ ] **Historical Graveyard** (how value dies here)
+- [ ] **Top 2–3 company deep dives** with Balance Sheet + P&L + **ROCE/ROE**
+- [ ] **Consensus vs Variant View** + a **Falsification Test** (what would prove me wrong?)
+- [ ] **Valuation** (sector-appropriate + margin-of-safety) + **Investment Fit** (priced to cycle)
+- [ ] **Conclusion** that answers the Research Question at the declared horizon (your own view)
+
+**[APPENDIX] — the evidence room (optional depth, not in the main narrative):**
+- [ ] **Cycle Dashboard** — leading indicators (current / 5Y avg / direction) → *where are we?*
+- [ ] **Industry KPI Dashboard** — operational scoreboard → *who is winning?*
+- [ ] **Full company scoring table** (≥1 company scored end-to-end, incl. Capital Allocation)
+- [ ] **Historical Graveyard** (how value dies here + base rate)
 - [ ] **Live Risk Dashboard** (thesis-killers + tripwires)
-- [ ] **Consensus vs Variant View** (what consensus believes; where you differ; evidence)
-- [ ] **Valuation** with a sector-appropriate method + margin-of-safety check
-- [ ] **Investment Fit** (compounder / cyclical / turnaround / special-sit — at what price/cycle)
-- [ ] **Conclusion** that answers the Research Question (your own view)
-- [ ] **Data sources / monitoring cadence** appendix
+- [ ] **Data sources / monitoring cadence**
 
 ## GATE 2 — Craft (good → great)
 - [ ] **Facts > opinions** — claims sourced, not vibes
@@ -52,6 +61,9 @@ writing it should feel like a **research flow**; here is where it gets graded li
 - [ ] **Visual where it counts** — value chain, timeline, Porter's, both dashboards as tables/diagrams
 - [ ] **Archetype weighting respected** — ~60% effort on the over-weighted modules, full coverage elsewhere
 - [ ] **Contrarian edge** — the variant view is genuinely non-consensus and evidenced, not a strawman
+- [ ] **Readability governor honoured** — CORE narrative stays ~15–20 pages; heavy machinery is
+      in the APPENDIX. If a reader can't reach the insight, the report failed.
+- [ ] **Second-order thinking** — at least one driver→outcome→consequence chain chased 2–3 steps
 
 ---
 

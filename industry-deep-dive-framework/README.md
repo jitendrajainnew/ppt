@@ -116,18 +116,30 @@ Run the modules roughly in order. **Not every industry needs every module at equ
 Infrastructure), which tells you which modules to over-weight. Weighting changes *depth*, not
 *coverage*: every module is still considered. The CHECKLIST tells you the minimum.
 
-> **The spine has grown.** The original 12 modules are the core; four feedback rounds added
-> the elements that separate research from a deck. The canonical, full flow now lives in
-> **`TEMPLATE.md`** (use that to write). The additions, and where they sit:
-> - **★ Research Question** — *before* everything (the central uncertainty)
-> - **Module 8 → Cycle Dashboard** — leading-indicator monitoring table
-> - **Module 10 → Management & Capital Allocation** — first-class, with its own score
-> - **Module 13/14 → Failure split** — Historical **Graveyard** (learn) + **Live Risk
->   Dashboard** (monitor today's thesis-killers)
-> - **Module 15 → Consensus vs Variant View** — the contrarian/alpha module
+> **The spine has grown.** The original 12 modules are the core; successive feedback rounds
+> added the elements that separate research from a deck. The canonical, full flow now lives in
+> **`TEMPLATE.md`** (use that to write). The additions:
+> - **★ Research Question** — *before* everything (the central uncertainty) + a **time-horizon
+>   declaration** (trade / investment / structural — most disagreements are horizon mismatches)
+> - **Module 5b → Industry Metrics Cheat Sheet** — the *language* of the industry (the 5–10
+>   insider ratios + what "good" looks like); the one page to read after the value chain
+> - **Module 8 → Cycle Dashboard** (*where are we?*) + **Second-Order Effects** (chase the
+>   driver→outcome→**consequence** chain — best alpha is often 2–3 steps down)
+> - **Module 8b → Industry KPI Dashboard** (*who is winning?* — operational scoreboard, distinct
+>   from the cycle question)
+> - **Module 10 → Management & Capital Allocation** — first-class, scored
+> - **Module 13/14 → Failure split** — Historical **Graveyard** (learn) + **Live Risk Dashboard** (monitor)
+> - **Module 15 → Consensus vs Variant View** + a **Falsification Test** (what would prove me wrong?)
 > - **Module 16 → Investment Fit** — compounder/cyclical/turnaround/special-sit, *priced to cycle*
 >
-> The descriptions below cover the original spine; the new modules are detailed in `TEMPLATE.md`.
+> **Readability governor — Core vs Appendix.** To stop the framework becoming research
+> bureaucracy, every module is tagged **[CORE]** or **[APPENDIX]** in `TEMPLATE.md`. The CORE
+> modules are a tight **15–20 page narrative** (the argument); the APPENDIX holds the heavy
+> machinery (full dashboards, full company scores, graveyard, source library). If nobody
+> reaches the insight, the report failed — keep the narrative lean.
+>
+> The descriptions below cover the original spine; the new modules are detailed in `TEMPLATE.md`,
+> and archetype weighting + mandatory deliverables in `ARCHETYPES.md`.
 
 ---
 
