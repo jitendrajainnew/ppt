@@ -148,6 +148,10 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 - **Per-company block [CORE for the top names]:**
   ### Company: _____
   - Positioning · Balance sheet · P&L (growth, margin, **ROCE/ROE**) · Triggers · Risks: _____
+  - **Moat analysis** _(not all growth is equally durable — rate each)_:
+    | Moat type | Strength | Evidence |
+    |---|---|---|
+    | Scale · Brand · Regulatory · Distribution · Pipeline · Switching costs | | |
 
 ## 13. Failure Modes — Historical Graveyard  [APPENDIX]
 - **Who died / which sub-sectors destroyed value + cause:** _____

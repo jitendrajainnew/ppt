@@ -141,11 +141,33 @@ but R&D pipelines + complex-generic/biosimilar innovation matter (Technology). P
 - **Demand vs STOCK cycle:** *Evidence:* demand barely moves with the economy. *Interpretation:*
   what moves the *stocks* is the **patent-cliff calendar + the USFDA observation cycle**, not GDP.
   *Conclusion:* trade the compliance/pricing cycle, not macro. **[H]**
-- **★ Second-Order Effects:** GLP-1 boom → ① peptide **API** demand surge (Divi's/Laurus) → ②
-  **CDMO/fill-finish** capacity scramble → ③ specialty **delivery-device** & cold-chain demand →
-  ④ as branded GLP-1 cannibalises older diabetes/cardio therapies, **legacy-drug volumes may
-  erode** (a *negative* 2nd-order effect for some domestic portfolios). *The opportunity and the
-  risk both sit 2 steps down the chain.* **[M]**
+- **Key numbers [illustrative ~FY24, verify]:** global pharma ≈ **$1.5tn**; US generics ≈
+  **$100bn+**; India domestic market ≈ **₹2.0–2.2 lakh cr (~$25bn), growing ~8–10%**; India
+  pharma exports ≈ **$27bn (US ≈ 31%)**; global GLP-1 ≈ **$50bn → $100bn+ by 2030 (~25% CAGR)**;
+  India biosimilars opportunity ≈ tens of $bn over the decade. **[M, verify]**
+
+## 8a. CYCLE DASHBOARD  [APPENDIX] — *where are we in the cycle?*  (illustrative — verify)
+| Indicator | Current (~FY24) | 5Y context | Direction | What it signals |
+|---|---|---|---|---|
+| US base-business price erosion | ~mid-single-digit | was high-single/double-digit (2018–22) | ↑ (improving) | Pricing cycle bottoming |
+| US drug shortages | Elevated | rising | → | Supports price stability |
+| India market growth (IPM) | ~8–10% | steady | → | Defensive base |
+| USFDA inspection intensity | High | high since 2014 | → | Persistent compliance risk |
+| GLP-1 patent calendar | India expiry ~Mar-2026 | — | ↑ | Volume driver approaching |
+
+## 8b. INDUSTRY KPI DASHBOARD  [APPENDIX] — *who is winning?*  (illustrative ~FY24 — verify)
+| KPI | Sun | Dr Reddy's | Cipla | Divi's | Mankind | Why it signals winning |
+|---|---|---|---|---|---|---|
+| Revenue (~₹cr) | ~48,000 | ~28,000 | ~26,000 | ~8,000 | ~10,000 | Scale |
+| EBITDA margin | ~27–28% | ~26% | ~24% | ~30%+ | ~25% | Quality of mix |
+| **ROCE** | high-teens+ | high-teens+ | mid-teens | ~15–18% | **high-20s** | Capital efficiency |
+| US % of sales | ~30% | ~45% | ~25% | ~0 (API/CDMO) | ~0 | US = erosion exposure |
+| Domestic % | ~30% | ~18% | ~40% | ~0 | **~97%** | Sticky, high-ROCE |
+| R&D % of sales | ~6–7% | ~8–9% | ~5–6% | ~2–3% | ~1% | Innovation intensity |
+| Specialty/CDMO tilt | **Specialty** | building | building | **CDMO/API** | none | Where value migrates |
+| USFDA status | Halol overhang | mostly VAI | mostly VAI | clean | low US exposure | Regulatory standing |
+> *Reading it:* Mankind wins on **ROCE + domestic stickiness**; Divi's on **margin + clean
+> compliance**; Sun on **specialty + scale**; Dr Reddy's carries the **most US-erosion exposure**.
 
 ## 9. Regulation, Policy & Government — *lead actor*  [CORE]  (over-weighted per archetype)
 | Policy / body | Effect | Tailwind/Risk |
@@ -157,12 +179,37 @@ but R&D pipelines + complex-generic/biosimilar innovation matter (Technology). P
 | **PLI bulk drugs/API** | Subsidises backward integration | Tailwind (China+1) |
 | **US IRA drug pricing** | Pressures US innovator/biosimilar pricing | Emerging risk |
 
-## 10. Management & Capital Allocation ⭐  [CORE summary]  (over-weighted per archetype)
+**★ COMPLIANCE SCORECARD [CORE — the #1 ranking input for a Regulated archetype; illustrative, verify]:**
+| Company | USFDA standing (~FY24) | Open warning letters / import alerts | FDA score /5 |
+|---|---|---|---|
+| Divi's | Mostly clean / VAI | None known | **5** |
+| Cipla | Mostly VAI; periodic 483s | Watch (Goa/Indore history) | **4** |
+| Dr Reddy's | Mostly VAI | Periodic 483s, resolved | **4** |
+| Sun Pharma | Halol overhang (long saga) | Halol historically flagged | **4** |
+| Aurobindo | History of unit-level WLs | Periodic, plant-specific | **3** |
+> This column feeds **C1 (25% weight)** of the Module 11 rubric — the single largest scoring input.
+
+## 10. Management & Capital Allocation ⭐  [CORE summary + APPENDIX detail]  (over-weighted per archetype)
 > *Same industry, same cycle → different management → different outcome.* The clearest divider in
 > Indian pharma is **who torched capital on overpriced US-generic M&A vs who compounded via
-> specialty/domestic.** Sun scored below; the **most instructive contrast is Laurus** (aggressive
-> capex into CDMO depressed near-term ROCE — a *deliberate* allocation bet, not destruction —
-> watch whether returns normalise as utilisation ramps). **[M]**
+> specialty/domestic.**
+
+**Acquisition track record [APPENDIX — illustrative, verify; the heart of pharma capital allocation]:**
+| Acquirer → Target | ~Value | Verdict | Why |
+|---|---|---|---|
+| Sun → **Taro** (2010) | ~$0.5bn | **Created** | Specialty derma cash machine |
+| Sun → **Ranbaxy** (2014) | ~$3.2bn | Mixed → OK | Painful integration, eventually digested for scale |
+| Dr Reddy's → **Betapharm** (2006) | ~€480m | **Destroyed** | German tender market collapsed |
+| Lupin → **Gavis** (2015) | ~$880m | **Destroyed** | Bought into US erosion at the peak |
+| Cipla → **InvaGen/Exelan** (2015) | ~$550m | Mixed | US base build, modest returns |
+| Biocon → **Viatris biosimilars** (2022) | ~$3.3bn | Jury out | Debt-funded; leverage overhang |
+| Mankind → **Bharat Serums** (2024) | ~₹13,600cr | Watch | Tests its domestic-discipline record |
+
+- **R&D productivity lens:** judge R&D by *output* (complex approvals, specialty launches), not
+  spend. Sun's ~6–7% spend yielding a branded specialty franchise > a peer spending 9% on
+  commodity ANDAs. **[M]**
+- **Pattern [H]:** the value-destroyers all share one trait — **debt-funded US-generic M&A bought
+  near the pricing peak.** The compounders deployed into **domestic brands / specialty / CDMO**.
 
 ## 11. Evaluate-a-Pharma-Business — weighted rubric ⭐  [CORE]
 | # | Criterion | Weight | Why |
@@ -198,6 +245,15 @@ Mankind, Torrent, JB, Eris · *Biosimilars* Biocon · *Challengers* Aurobindo, Z
   **ROCE high-teens+**, R&D ~6–7% of sales (rising with specialty). **[M, verify]**
 - **Compliance:** historically **Halol** plant under USFDA scrutiny (483s/warning-letter saga) —
   *the* swing factor; track status. **[M]**
+- **★ Moat analysis [CORE — not all growth is equally durable]:**
+  | Moat type | Strength | Evidence |
+  |---|---|---|
+  | Scale | Strong | Largest Indian pharma (~₹48,000cr); cost + reach |
+  | Brand | Strong | #1 India branded franchise, sticky scripts |
+  | Regulatory | Medium | Big USFDA footprint **but** Halol overhang caps it |
+  | Distribution | Strong | Deep India field force |
+  | Pipeline | Med–Strong | Global specialty (Ilumya/Winlevi) = durable, differentiated |
+  | Switching costs | Medium | Specialty/derma stickier than commodity generics |
 - **Triggers:** specialty launches/scale-up, Halol resolution, GLP-1 optionality.
 - **Risks:** Halol/USFDA, specialty R&D execution, US generic erosion on the legacy book.
 
