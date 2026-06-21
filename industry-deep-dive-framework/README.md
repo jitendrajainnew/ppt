@@ -26,6 +26,7 @@ That spine — generalised and made repeatable — is this framework.
 | `TEMPLATE.md` | A blank, fill-in-the-blanks deck outline. Copy it per new industry. |
 | `CHECKLIST.md` | A one-page "is my deep dive complete?" checklist + quality bar |
 | `EXAMPLES.md` | How each of the four source decks maps onto the framework (proof it generalises) |
+| `examples/pharma.md` | A fully worked example — the framework applied to Indian pharma, showing how 3 modules "flex" for a hard case |
 
 **Workflow:** Copy `TEMPLATE.md` → rename to `<industry>.md` → work top to bottom →
 use `CHECKLIST.md` to grade completeness before you call it done.
