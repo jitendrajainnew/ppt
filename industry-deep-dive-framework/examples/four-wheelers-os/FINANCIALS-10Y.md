@@ -4,10 +4,14 @@
 > long-run series, not OCR'd PDFs. Mar-2026 = TTM/est. ₹ crore.
 > [S: Screener.in structured tables, ~June 2026]. ⚠️ Verify vs filings before real use.
 
-> ⚠️ **Data gap:** Tata Motors (`TATAMOTORS.json`) returned empty — the FY2025 demerger
-> (CV business → Tata Motors / PV+JLR → Tata Motors PV) broke the continuous 10-year series
-> on Screener. The single largest Indian auto group by revenue is therefore **absent** from
-> the tables below; read the peer conclusions with that survivorship caveat in mind.
+> ✅ **Data gap resolved:** Tata Motors is now included via **`TMPV.json`** (Tata Motors Passenger
+> Vehicles, post-2025-demerger ticker) — a continuous series covering the **full Tata Motors / JLR
+> cycle** (net profit **−₹28,724cr FY19 → +₹82,645cr FY26ttm**). It is the largest group by revenue
+> (~₹4.4 lakh-cr FY25) and the listed EV-PV leader, so its inclusion completes the peer set.
+> ⚠️ **Caveat:** the series is **JLR-driven and demerger-distorted in FY26ttm** (₹86,113cr "other
+> income" lifts FY26 net profit; OPM 6% / ROCE 3% are *not* clean operating returns — read FY24–25
+> ROCE ~20% / OPM 13% as the operating signal). Treat it as a **deep-cyclical turnaround**, not a
+> like-for-like India-PV-only comparison with the mass-market names.
 
 ## ROCE % — the capital-efficiency trajectory (the headline)
 
@@ -16,9 +20,13 @@
 | **Maruti** | 19 | 24 | **24** | 9 | **6** | 24 | **22** | 19 |
 | **M&M** | 11 | 12 | **13** | 7 | **11** | 14 | **14** | 15 |
 | **Eicher (RE)** | 28 | 53 | **49** | 25 | **17** | 31 | **30** | 31 |
+| **Tata Motors (TMPV)** | 21 | 9 | **9** | −0 | **1** | 19 | **20** | 3† |
 
 *FY22 is the chip-shortage + COVID-aftermath trough column; FY18 is the pre-cycle peak for the
 mass-market names. Eicher's FY17-19 50%+ ROCE is the premium-brand signature (see below).*
+*† Tata Motors (TMPV) FY26ttm ROCE 3% is **demerger/exceptional-distorted** (FY26 carries ₹86,113cr
+"other income"); its clean operating ROCE is the **FY24–FY25 ~19–20%**. Note the JLR cycle: ROCE
+collapsed to ~−0% (FY20) / 1% (FY22) during the FY19–FY22 loss streak, then recovered to ~20%.*
 
 ## Net Profit (₹ cr) — the cycle in profits
 
@@ -27,6 +35,7 @@ mass-market names. Eicher's FY17-19 50%+ ROCE is the premium-brand signature (se
 | **Maruti** | 3,809 | **7,881** | 5,678 | **3,880** | 8,211 | 13,488 | **14,500** | 14,680 |
 | **M&M** | 3,381 | **7,958** | **−321** | 7,253 | 11,374 | 12,270 | **14,073** | 18,622 |
 | **Eicher (RE)** | 702 | **1,667** | 2,203 | **1,347** | 1,677 | 2,914 | **4,734** | 5,515 |
+| **Tata Motors (TMPV)** | 14,073 | **9,091** | −11,975 | **−11,309** | 2,690 | 31,807 | **28,149** | 82,645‡ |
 
 *Maruti FY22 ₹3,880cr is the chip/COVID profit trough — less than half its FY18 peak. M&M's FY20
 ₹−321cr loss (a one-off tax/impairment + auto downturn) marks the bottom of its turnaround; it then
