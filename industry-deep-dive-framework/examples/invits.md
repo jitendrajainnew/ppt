@@ -4,12 +4,14 @@
 > full framework (Decision Summary → Research Question → … → Research Log), the 5 layers, archetype
 > weighting, the CORE/APPENDIX split, confidence tags, and Evidence→Interpretation→Conclusion.
 >
-> ⚠️ **All figures are ILLUSTRATIVE and directional** (approx. FY24–FY25 vintage) to show the
-> *shape* of a completed deep dive — they use **"≈"** and carry **[M, verify]**. **Refresh every
-> number against primary sources (Module 17) before any real use.** Not investment advice.
+> ⚠️ **Data status (partially LIVE-SOURCED):** key figures in Modules 1, 8b, 12, 18 are now
+> **sourced and dated** — tagged **[S]** with the source (IndiGrid IR/earnings releases FY25–FY26;
+> Capitalmind "Best InvIT" Sep-2024; PrimeInvestor; Knight Frank/CRISIL InvIT-2025; SEBI/NHAI press,
+> 2025). Cells still tagged **[M, verify]** remain illustrative/directional. Always re-confirm against
+> the latest filings before any real use. **Not investment advice.**
 
 > **Writing rules in force:** every major call shows **Evidence → Interpretation → Conclusion**;
-> claims carry a **confidence tag [H] strong · [M] some · [L] speculative**.
+> claims carry a **confidence tag [H] strong · [M] some · [L] speculative**; sourced facts carry **[S]**.
 
 > **Note — InvITs are not operating companies, and they are the infra *sibling* of REITs, not a copy.**
 > Modules are adapted: *"How it's made" = how an InvIT is **structured*** (sponsor → project SPVs →
@@ -26,7 +28,7 @@
 leverage)**, and **regulation (SEBI InvIT mandates, taxation)** dominate. Per `ARCHETYPES.md`,
 over-weight **Capital Allocation (10)**, **Asset utilisation / Demand-supply-cycle (8)**, **Regulation
 (9)**, and **Valuation (16, NDCF/DPU yield-spread)**. Innovation/tech (3) is de-emphasised.
-**Data vintage:** illustrative ~FY24–FY25 · **Version:** v1.0 (worked example) · **Review date:** _set on use_
+**Data vintage:** FY25 / Q1–Q4 FY25 (live-sourced where tagged [S], ~June 2026 research) · **Version:** v1.1 (live-data pass) · **Review date:** _set on use_
 
 ---
 
@@ -78,17 +80,21 @@ over-weight **Capital Allocation (10)**, **Asset utilisation / Demand-supply-cyc
 - *Not investment advice. Do your own due diligence.*
 
 ## 1. Why This Industry, Why Now  [CORE]
-1. **High absolute yields + spread** — InvIT distribution yields ≈ **9–13%** vs 10Y G-sec ≈ **~6.5–7%**;
-   a **~250–600 bps spread**, far wider than REITs (a real cushion if cash is sustainable). **[M, verify]**
+1. **High absolute yields + spread** — InvIT distribution yields ≈ **7–13%** (pre-tax returns
+   ≈10–12%, post-tax ≈7–9%) vs 10Y G-sec ≈ **~6.5%**; a wide spread vs REITs (a real cushion if
+   cash is sustainable). [S: CRISIL/Knight Frank InvIT-2025; Aug–Oct 2025] **[H]**
 2. **Rate-cut cycle** — a falling-rate environment compresses the discount rate → **NAV uplift** +
    **cheaper acquisition funding** for these duration/leveraged vehicles. **[M]**
-3. **Asset-monetisation super-pipeline** — the **National Monetisation Pipeline (NMP, ≈₹6 lakh cr
-   target)** + PowerGrid / NHAI (via NHIT) recycling brownfield assets *creates the acquisition supply*
-   InvITs feed on. **[M, verify]**
+3. **Asset-monetisation super-pipeline** — **NHAI alone mobilised ≈₹43,600cr via InvITs over
+   FY22–FY25**, and the **National Monetisation Pipeline is expected to ~3× InvIT AUM to ≈₹21
+   trillion (~$250bn) by FY2030** — this *creates the acquisition supply* InvITs feed on.
+   [S: SEBI/NHAI commentary; rprealtyplus citing CRISIL, 2025] **[M]**
 4. **Power-grid capex super-cycle** — renewable-evacuation + grid build-out expands the transmission
    asset pool IndiGrid/PowerGrid InvIT can acquire. **[M]**
-5. **Institutionalisation** — sovereign/pension/insurance buyers (GIC, KKR, Ontario Teachers', etc.)
-   anchoring InvITs deepens the market and lowers cost of capital. **[M]**
+5. **Scale + institutionalisation** — **24 InvITs now operate (Oct 2025)** and combined REIT+InvIT
+   AUM is **≈₹9.25 trillion (Oct 2025)**; road InvIT AUM alone grew to **₹2.46 lakh cr in FY25 from
+   ₹0.60 lakh cr in FY21 (~42% CAGR)**, with sovereign/pension anchors lowering cost of capital.
+   [S: Knight Frank/CRISIL, 2025] **[H]**
 
 ## 2. What It Is & History  [CORE — keep brief]
 - **5-year-old test:** an InvIT is like a REIT but instead of buildings it owns **roads, power lines,
@@ -268,21 +274,26 @@ capital — so capital allocation (accretion) isn't a side-show, it's the reason
 | Asset-monetisation pipeline (NMP/drop-downs) | Ramping | building since 2020 | ↑ | Accretion runway expanding |
 | Cost of capital (InvIT bond spreads) | Easing | spiked in rate-up shocks | ↓ | Cheaper accretive M&A |
 
-## 8b. INDUSTRY KPI DASHBOARD  [APPENDIX] — *who is winning?*  (illustrative ~FY24 — verify, [M])
-| KPI | IndiGrid | PowerGrid InvIT | IRB InvIT | NHIT | Why it signals winning |
-|---|---|---|---|---|---|
-| Asset type | **Transmission (availability)** | Transmission (availability) | **Roads (toll, traffic-risk)** | Roads (toll + TOT) | Demand-risk profile |
-| AUM (≈₹cr) | ~30,000+ | ~12,000–15,000 | ~8,000–10,000 | ~30,000+ | Scale |
-| Distribution yield | ~9–10% | ~10–12% | ~11–13% | ~na (private/varied) | Yield to holder |
-| Net debt / AUM | ~60–65% | low (lightly levered) | moderate | varies | Leverage headroom |
-| Rating | **AAA** | AAA | AA+/AAA | AAA | Cost-of-capital & 70% cap eligibility |
-| AUM growth (accretion) | **Strong (active acquirer)** | Limited (PGCIL drop-downs) | Asset-specific | Strong (NHAI TOT) | Inorganic runway |
-| Mgmt model | External (KKR) | External (PGCIL) | External (IRB) | External (NHAI/Govt) | Alignment / fee leakage |
-> *Reading it:* **IndiGrid** wins on **active accretive acquisition + AAA + availability cash flows**;
-> **PowerGrid InvIT** on **low leverage + pristine sponsor** but thinner growth; **IRB InvIT** offers the
-> **highest headline yield but carries traffic risk + finite toll concessions** (yield ≠ income); **NHIT**
-> on **scale + sovereign (NHAI) pipeline**. The dashboard *visually separates* the availability-based
-> compounders from the traffic-risk, return-of-capital-heavy yield plays.
+## 8b. INDUSTRY KPI DASHBOARD  [APPENDIX] — *who is winning?*
+> Sourced ~Q4 FY25 / Q1 FY25 where cited [S]; a few cells still [M, verify]. Mixed vintages noted.
+| KPI | IndiGrid | PowerGrid InvIT | IRB InvIT | Why it signals winning |
+|---|---|---|---|---|
+| Asset type | **Transmission + solar (availability)** | Transmission (availability) | **Roads (BOT toll + 1 HAM, traffic-risk)** | Demand-risk profile |
+| AUM | **≈₹29,600cr (₹296bn), Q4 FY25** [S] | ~₹12–15k cr [M] | targeting **₹40,000cr**; ~₹8–10k cr now [S] | Scale |
+| DPU | **₹15.0 FY25 → ₹16.0 FY26 guide (+6.7%)** [S] | **₹12.0/unit** (yield ≈13.1%) [S] | **₹8.0 FY24, ↓ from ₹10.55 FY18; ₹6.3–6.5 FY27 guide** [S] | Income trajectory |
+| Net debt / AUM | **≈59% (Q4 FY25), 61.3% (Q1 FY25)** [S] | **≈0.26% — essentially unlevered** [S] | ~61% [S] | Leverage headroom |
+| Cost of debt | **≈7.74% (lowest in class)** [S] | ~8.09% [S] | ~7.7% [M] | Spread on accretion |
+| Rating | **AAA** [S] | AAA [S] | AA+/AAA [M] | Cost of capital + 70% cap eligibility |
+| Accretion | **Active acquirer; NDCF ~33% CAGR FY20–24** [S] | Limited; **dipped into reserves to hold ₹12 DPU FY25 (red flag)** [S] | Asset-specific; finite concessions | Inorganic runway |
+> *Reading it (Evidence → Interpretation → Conclusion):* **Evidence** — IndiGrid grows DPU ₹15→₹16
+> on AAA/7.74% debt and 33% NDCF CAGR; PowerGrid InvIT is near-unlevered but **funded FY25's ₹12 DPU
+> partly from reserves**; IRB's DPU has *fallen* ₹10.55→₹8.0 with FY27 guidance ₹6.3–6.5 on a ticking
+> toll concession. **Interpretation** — headline yield is *inversely* related to income durability here:
+> IRB's ~12%+ yield embeds the most return-of-capital + traffic risk; PowerGrid's reserve-funded payout
+> is not fully covered by cash; IndiGrid's lower headline yield is the most *cash-covered and growing*.
+> **Conclusion** — IndiGrid is the compounder, PowerGrid the low-risk-but-no-growth bond-proxy with a
+> coverage warning, IRB the high-yield trap. **Asset type + cash coverage > headline yield. [H]**
+> [S: IndiGrid earnings releases/IR FY25–FY26; Capitalmind "Best InvIT" Sep-2024; PrimeInvestor; press, 2025]
 
 ## 9. Regulation, Policy & Government — *defines the instrument*  [CORE]  (over-weighted per archetype)
 | Policy / rule / body | Effect | Tailwind or risk? |
@@ -380,10 +391,10 @@ IRB Infra Trust, Cube Highways, Bharat Highways · *Towers/other* Data Infrastru
   acquisition pipeline. Sits at the *core, low-risk* centre of the asset class.
 - **Scorecard 4.07/5:** strong on asset-risk(5)/leverage(4)/distribution-sustainability(4)/pipeline(4)/
   accretion(4); weaker on governance(3, externally managed + sponsor-conflict watch).
-- **Financials / metrics [illustrative, [M, verify]]:** availability ≈ **~99%**, distribution yield ≈
-  **~9–10%**, **net debt/AUM ≈ ~60–65%** (AAA-consistent, within the 70% cap), DPU growing low-single-
-  to mid-single-digit, **return-of-capital share moderate** (transmission is largely income, not
-  amortisation), 35-yr licences with re-acquisition optionality. **[M, verify]**
+- **Financials / metrics [S: IndiGrid IR/earnings releases FY25–FY26 + Capitalmind, 2024–25]:** **AUM
+  ≈₹29,600cr (₹296bn), Q4 FY25**; **DPU ₹15.0 FY25 → ₹16.0 FY26 guidance (+6.7%)**; **net debt/AUM ≈59%
+  (Q4 FY25)** within the 70% cap; **cost of debt ≈7.74% (lowest in class)**; **NDCF ~33% CAGR FY20–24**;
+  **AAA**-rated; ~26-yr avg transmission concession; traded ≈5% premium to NAV (Q1 FY25). **[H]**
 - **Capital allocation:** serial accretive acquirer — sponsor drop-downs *and* third-party transmission
   buys at a positive accretion spread; *the* swing factor is **accretive growth without over-leverage,
   dilution, or drifting into riskier (renewables/offtaker) assets.** **[M]**
@@ -530,14 +541,14 @@ IRB Infra Trust, Cube Highways, Bharat Highways · *Towers/other* Data Infrastru
   spread* and *pipeline-runway* claims lean tier 2–3 → tagged **[M]**; yield-trap-vs-compounder framing
   is interpretive → **[M]**.
 
-## 18. Research Log  [APPENDIX] — living document (seed entries; append on each new data point). Review date: _set on use_
+## 18. Research Log  [APPENDIX] — living document (append on each new data point). Review date: _set on use_
 | Date | Observation (fact, dated + sourced) | Impact on thesis (+/−/neutral) | Confidence |
 |---|---|---|---|
-| _illustrative_ | 10Y G-sec easing as rate-cut cycle begins | + (discount-rate compression → NAV uplift + cheaper M&A) | [M] |
-| _illustrative_ | IndiGrid availability sustained ≈99%, AAA maintained | + (supports demand-risk-free compounder thesis) | [M] |
-| _illustrative_ | IndiGrid net debt/AUM at ~60–65% (toward higher end) | − (leverage / duration watch) | [M] |
-| _illustrative_ | IRB InvIT DPU carries high return-of-capital share | − (headline yield ≠ income; traffic-risk trust) | [M] |
-| _illustrative_ | NMP / NHAI-TOT drop-down pipeline ramping | + (accretion runway expanding) | [M] |
-| _illustrative_ | IndiGrid renewables foray adds offtaker risk | neutral/− (tests clean-transmission discipline) | [L] |
-| _illustrative_ | All listed InvITs still externally managed; drop-down pricing debated | − (governance / fee-leakage overhang) | [M] |
+| FY25 (Q4) | IndiGrid AUM ≈₹296bn; net debt/AUM ≈59%; AAA; DPU ₹15.0 → **₹16.0 FY26 guidance (+6.7%)** [S: IndiGrid IR] | + (cash-backed DPU growth — compounder thesis intact) | [H] |
+| FY20–24 | IndiGrid NDCF ~33% CAGR; cost of debt ≈7.74% (lowest) [S: IndiGrid/Capitalmind] | + (accretion engine + funding edge) | [H] |
+| FY25 | **PowerGrid InvIT dipped into reserves to sustain ₹12 DPU** (yield ~13.1%) [S: PrimeInvestor/Capitalmind] | − (payout not fully cash-covered — coverage red flag) | [M] |
+| FY18→FY24 | **IRB InvIT DPU fell ₹10.55 → ₹8.0**; FY27 guidance ₹6.3–6.5 [S: Capitalmind/press] | − (toll/finite-concession trust = headline yield ≠ income) | [H] |
+| Oct 2025 | **24 InvITs**; REIT+InvIT AUM ≈₹9.25 trillion; road-InvIT AUM ₹2.46 lakh cr FY25 (~42% CAGR from FY21) [S: Knight Frank/CRISIL] | + (asset class scaling, deepening liquidity) | [H] |
+| FY22–25 | **NHAI mobilised ≈₹43,600cr via InvITs**; NMP targets ~3× InvIT AUM to ≈₹21tn by FY2030 [S: SEBI/NHAI/CRISIL] | + (accretion supply runway expanding) | [M] |
+| ongoing | All listed InvITs externally managed; drop-down pricing debated | − (governance / fee-leakage overhang) | [M] |
 | _<add next>_ | | | |
