@@ -111,22 +111,24 @@ demerger-distorted) — JLR drives both the scale and the swing.
   (Maruti's FY22 = 6%), but own the premiumisation/SUV compounders (M&M, Eicher) across the cycle.**
   The decade's standout is M&M. **[M]** — *contingent on the EV-transition risk below.*
 
-**5. Caveats — the EV transition and the missing giant.**
-- *Evidence:* The 10-year tables predate mass-EV penetration; today's incumbent ROCE/OPM reflect the
-  ICE/hybrid franchise. Tata Motors — the EV-PV leader and largest group by revenue — is **absent**
-  (demerger data gap).
-- *Interpretation:* The premium/SUV moats above are an **incumbent-ICE** story; EV transition is the
-  forward risk to exactly these returns, and the one listed EV-PV leader is missing from the sample.
-- *Conclusion:* Treat the conclusions as **incumbent-incumbent**, not whole-sector; size EV-transition
-  risk separately and re-pull Tata Motors once the post-demerger series stabilises. **[L]**
+**6. Caveats — the EV transition and the demerger noise.**
+- *Evidence:* The 10-year tables predate mass-EV penetration; today's mass-market ROCE/OPM reflect the
+  ICE/hybrid franchise. Tata Motors (TMPV) is **now included**, but its FY26ttm line is **demerger/
+  exceptional-distorted** (₹86,113cr other income; OPM 6% / ROCE 3% ≠ operating).
+- *Interpretation:* The premium/SUV moats above are still largely an **incumbent-ICE** story; EV transition
+  is the forward risk to exactly these returns, and Tata's FY26ttm headline overstates clean earnings.
+- *Conclusion:* Read the cross-cycle conclusions on **clean operating years** (Tata FY24-25 ROCE ~20%, not
+  FY26ttm 3%); size EV-transition risk separately; re-pull Tata Motors once the post-demerger India-PV+EV
+  series is reported clean. **[L]**
 
 ---
 
 *Confidence tags: [H] high — multi-year data, clear trend; [M] medium — interpretation/forward call;
 [L] low — data gap or unmodelled risk.*
 
-*Source JSON: `research-pipeline/data/financials/<TICKER>.json` (full 12-year P&L + ratios).
-TATAMOTORS.json empty (FY2025 demerger).*
+*Source JSON: `research-pipeline/data/financials/<TICKER>.json` (full 12-year P&L + ratios) —
+`MARUTI.json`, `M&M.json`, `EICHERMOT.json`, `TMPV.json`. Tata Motors now via **TMPV.json**
+(post-2025-demerger ticker; the legacy `TATAMOTORS.json` was empty due to the FY2025 demerger).*
 
 ---
 
