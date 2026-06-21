@@ -12,8 +12,34 @@
 > into the **[APPENDIX]**. Tags below tell you which is which. Core = the argument;
 > Appendix = the evidence room.
 
+> **TWO WRITING RULES (apply throughout):**
+> 1. **Evidence → Interpretation → Conclusion.** Never blend them. State the *fact* (dated,
+>    sourced), then your *interpretation*, then the *conclusion*. (Fact: "module prices fell
+>    30%." Interpretation: "this looks like a cost-driven reset, not demand collapse."
+>    Conclusion: "margins compress near-term but volumes hold." Three different things.)
+> 2. **Tag confidence** on every major claim: **[H]** strong evidence · **[M]** some evidence ·
+>    **[L]** speculative. Not all conclusions deserve equal weight; say so.
+
 **Archetype:** ☐ Commodity ☐ Technology ☐ Regulated ☐ Infrastructure ☐ Network/Platform ☐ Hybrid: _____
 **Data vintage / sources current as of:** _____  ·  **Version:** _____
+
+---
+
+## ★ DECISION SUMMARY — the IC Page  [CORE · read-first, written-LAST]
+> If a PM reads only one page, this is it. One page, no prose. Fill it in *after* the analysis.
+> Tag each call with confidence **[H/M/L]**.
+
+| Question | Call |
+|---|---|
+| **Industry attractiveness** | ☐ Attractive ☐ Neutral ☐ Unattractive — _why, [H/M/L]_ |
+| **Best segment** | _____ |
+| **Worst segment** | _____ |
+| **Best-positioned company** | _____ (weighted score __/5) |
+| **Biggest risk** | _____ |
+| **Variant view (vs consensus)** | _____ [H/M/L] |
+| **What would change my mind** | _____ (falsification trigger) |
+| **Top 3 monitoring metrics** | _____ |
+| **Time horizon** | ☐ Trade (6m) ☐ Investment (1–3y) ☐ Structural (5–10y) |
 
 ---
 
@@ -132,8 +158,8 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 |---|---|---|---|
 
 ## 15. Consensus vs Variant View ⭐  [CORE] — where alpha lives
-| What consensus believes | Your variant view |
-|---|---|
+| What consensus believes | Your variant view | Confidence [H/M/L] |
+|---|---|---|
 - **Evidence supporting / contradicting (steelman the bears):** _____
 - **★ FALSIFICATION TEST — what specific, observable evidence would prove my thesis WRONG?**
   _(Forces honesty. e.g. Solar-India-share thesis is falsified if: imports rise again, PLI
@@ -155,3 +181,12 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 ## 17. Data Sources & How to Track  [APPENDIX]
 - **Primary/filings · industry bodies · analysts/handles:** _____
 - **Monitoring cadence:** _which dashboard metrics to refresh, how often, from where_
+
+## 18. Research Log  [APPENDIX] — what makes this a living document, not a dead PDF
+> Append (don't overwrite) every time a new data point lands. This is how a deep dive becomes
+> an *operating system*: the thesis updates as evidence arrives, and you can see *why* you
+> believe what you believe. Review date: _____
+| Date | Observation (fact, dated + sourced) | Impact on thesis (+ / − / neutral) | Confidence |
+|---|---|---|---|
+| | | | |
+| | | | |

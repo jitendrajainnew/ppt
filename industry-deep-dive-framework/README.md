@@ -96,20 +96,50 @@ Every module should consciously clear all five, but each module *leans* on one o
 
 ---
 
-## The Spine — 12 Modules
+## The Spine — the research flow
 
 ```
-  FRAME                 STRUCTURE                  BUSINESSES              VERDICT
-  ┌──────────┐          ┌──────────────┐           ┌───────────┐          ┌────────────┐
-  │ 0 Frame  │          │ 3 How it     │           │ 8 Evaluate│          │ 10 Valuation│
-  │ 1 Why now│   ──►    │   works      │   ──►     │   a biz   │   ──►    │ 11 Triggers │
-  │ 2 History│          │ 4 Segments   │           │ 9 Company │          │ 12 Risks    │
-  └──────────┘          │ 5 Value chain│           │   deep    │          │    Verdict  │
-                        │ 6 Structure  │           │   dives   │          │    Sources  │
-                        │ 7 Geography  │           └───────────┘          └────────────┘
-                        │   & demand   │
-                        └──────────────┘
+  DECISION SUMMARY (IC page — read first, written last)
+        │
+        ▼
+  ★ RESEARCH QUESTION ──► INDUSTRY STRUCTURE ──► ECONOMICS ──► CYCLE ──► MANAGEMENT
+   (the central          (history, how-made,    (value chain, (demand,   (capital
+    uncertainty +         segments, structure,   cheat sheet,  cycle +    allocation)
+    time horizon)         geography)             who profits)  2nd-order)      │
+                                                                              ▼
+        ┌─────────────────────────────────────────────────────────  COMPANIES
+        ▼                                                            (scored & ranked)
+   VARIANT VIEW ──► DECISION ──► MONITORING
+   (consensus vs    (valuation,   (Cycle + KPI dashboards,
+    you + falsi-     verdict,      Live Risk dashboard,
+    fication)        invest. fit)  Research Log = living doc)
 ```
+
+### Canonical module index (this numbering is authoritative — matches `TEMPLATE.md`)
+
+| # | Module | Tag |
+|---|---|---|
+| — | **Decision Summary (IC page)** | CORE (read-first, written-last) |
+| ★ | **Research Question** + time horizon | CORE |
+| 0–2 | Frame · Why now · History | CORE |
+| 3–4 | How it's made · Segments | CORE |
+| 5 / 5b | Value-chain margin map · **Metrics Cheat Sheet** | CORE |
+| 6–7 | Structure · Geography | CORE |
+| 8 | Demand/supply/cycle + **Second-Order Effects** | CORE |
+| 8a / 8b | **Cycle Dashboard** (where are we) · **KPI Dashboard** (who's winning) | APPENDIX |
+| 9 | Regulation & policy | CORE |
+| 10 | **Management & Capital Allocation** | CORE |
+| 11 | Evaluate-a-business (weighted rubric) | CORE |
+| 12 | Company deep dives (scored) | CORE (top names) / APPENDIX (full table) |
+| 13 / 14 | **Graveyard** (learn) · **Live Risk Dashboard** (monitor) | APPENDIX |
+| 15 | **Consensus vs Variant View** + Falsification Test | CORE |
+| 16 | Valuation, Verdict & **Investment Fit** | CORE |
+| 17 | Data sources & how to track | APPENDIX |
+| 18 | **Research Log** (living document) | APPENDIX |
+
+> The prose below explains the *rationale* for the original spine (Modules 0–9, 11, 12, 16);
+> the modules added in later rounds (Decision Summary, Research Question, 5b, 8a/8b, 10, 13,
+> 14, 15, 18) are specified in **`TEMPLATE.md`**, which is the authoritative working artifact.
 
 Run the modules roughly in order. **Not every industry needs every module at equal depth** —
 **pick your archetype in `ARCHETYPES.md` first** (Commodity / Technology / Regulated /
@@ -119,6 +149,9 @@ Infrastructure), which tells you which modules to over-weight. Weighting changes
 > **The spine has grown.** The original 12 modules are the core; successive feedback rounds
 > added the elements that separate research from a deck. The canonical, full flow now lives in
 > **`TEMPLATE.md`** (use that to write). The additions:
+> - **★ Decision Summary / IC Page** — the read-first one-pager (industry call, best/worst
+>   segment, best company, biggest risk, variant view, what-changes-my-mind, monitoring metrics);
+>   written last, read first
 > - **★ Research Question** — *before* everything (the central uncertainty) + a **time-horizon
 >   declaration** (trade / investment / structural — most disagreements are horizon mismatches)
 > - **Module 5b → Industry Metrics Cheat Sheet** — the *language* of the industry (the 5–10
@@ -131,6 +164,10 @@ Infrastructure), which tells you which modules to over-weight. Weighting changes
 > - **Module 13/14 → Failure split** — Historical **Graveyard** (learn) + **Live Risk Dashboard** (monitor)
 > - **Module 15 → Consensus vs Variant View** + a **Falsification Test** (what would prove me wrong?)
 > - **Module 16 → Investment Fit** — compounder/cyclical/turnaround/special-sit, *priced to cycle*
+> - **Module 18 → Research Log** — dated observations + impact on thesis; turns a dead PDF into
+>   a continuously-updated operating system
+> - **Two writing rules everywhere** — *Evidence → Interpretation → Conclusion* (never blended)
+>   and *confidence tags [H/M/L]* on major claims (no false precision)
 >
 > **Readability governor — Core vs Appendix.** To stop the framework becoming research
 > bureaucracy, every module is tagged **[CORE]** or **[APPENDIX]** in `TEMPLATE.md`. The CORE
@@ -337,9 +374,10 @@ duties, mining rights, and local-content rules make or break the economics.
 
 ---
 
-### Module 10 — How to Evaluate a Business in This Sector ⭐
+### Module 11 — How to Evaluate a Business in This Sector ⭐
 **Purpose:** The reusable **scorecard**. Before looking at any single company, define what a
 *good* business in this industry looks like. Then you can score every player consistently.
+_(Note: Module 10 — Management & Capital Allocation — comes just before this; see `TEMPLATE.md`.)_
 
 **The Cement deck's checklist is the template** — adapt the questions per industry:
 1. Ability to **grow capacity**?
@@ -353,13 +391,13 @@ The Solar deck gave the complement — characteristics of **successful companies
 toughest (raw-material) link: *sturdy balance sheet, economies of scale, limited competition*,
 and differentiation via *efficiency improvements / more robust product*.
 
-**Produce:** A 5–8 question scorecard tailored to this industry's economics, plus the
-"what good looks like" profile. **This becomes the lens for Module 9.**
+**Produce:** A weighted (1–5) scorecard tailored to this industry's economics, plus the
+"what good looks like" profile. **This becomes the lens for Module 12 (company deep dives).**
 
 ---
 
-### Module 11 — Company Deep Dives
-**Purpose:** Apply the Module 8 scorecard to the actual players. Group them, then dissect
+### Module 12 — Company Deep Dives
+**Purpose:** Apply the Module 11 scorecard to the actual players. Group them, then dissect
 the ones that matter.
 
 **Key questions per company:**
@@ -380,9 +418,11 @@ triggers, risks. Use the same layout for every company so they're comparable.
 
 ---
 
-### Module 12 — Valuation, Triggers, Risks & Verdict
+### Module 16 — Valuation, Triggers, Risks & Verdict
+_(In the canonical flow, Modules 13–15 — Graveyard, Live Risk Dashboard, Variant View — sit
+between the company deep dives and this; see `TEMPLATE.md`.)_
 
-**12a — Valuation.** Use the method that fits the sector:
+**16a — Valuation.** Use the method that fits the sector:
 - Replacement-cost / EV-per-tonne for capacity businesses (Cement: *"EV by Replacement Cost"*).
 - Growth-adjusted multiples for tech (Memory: PE vs growth, margin crossover vs TSMC).
 - Payback period & EPS bridge for capacity-doubling stories (Borosil: "3.8 years payback,
@@ -390,10 +430,10 @@ triggers, risks. Use the same layout for every company so they're comparable.
 - Always include a **"are we in a bubble / margin of safety"** sanity check (Memory:
   *"Are we in a Bubble? No, but not cheap either."*).
 
-**12b — Triggers / Catalysts.** What will re-rate these names? (new orders, capacity online,
+**16b — Triggers / Catalysts.** What will re-rate these names? (new orders, capacity online,
 duty imposition, cycle turn, M&A). Be specific and time-bound.
 
-**12c — Risks.** Always a dedicated section. Recurring risk taxonomy from the decks:
+**16c — Risks.** Always a dedicated section. Recurring risk taxonomy from the decks:
 - **Capital intensity** (can't fund growth)
 - **Policy dependence** (subsidy/duty reversal)
 - **Customer/order concentration** (Dredging: dependence on DCI order overflow)
@@ -403,14 +443,17 @@ duty imposition, cycle turn, M&A). Be specific and time-bound.
 - **Demand shock** (economic slowdown)
 - **Elevated valuations**
 
-**12d — Conclusion / Thesis.** Synthesise into a clear view (the Dredging conclusion is a
-good model: oligopoly, turnaround candidate, emerging small-cap, captive-to-contract shift).
+**16d — Conclusion / Thesis + Investment Fit.** Synthesise into a clear view that *answers the
+Research Question at the declared horizon* (the Dredging conclusion is a good model: oligopoly,
+turnaround candidate, emerging small-cap, captive-to-contract shift), then state **Investment
+Fit** (compounder / cyclical / turnaround / special-situation — *and at what price/cycle point*,
+since a great business bought too dear is still a bad investment).
 
-**Produce:** Valuation slide(s) + triggers list + risks list + a crisp conclusion.
+**Produce:** Valuation + triggers + risks + a crisp conclusion + the Investment Fit call.
 
 ---
 
-### Module 13 (appendix) — Data Sources & How to Track
+### Module 17 (appendix) — Data Sources & How to Track
 **Purpose:** Deliver on "learn where to hunt for data" and "ability to self-research."
 A deep dive that can't be maintained is a snapshot, not a map.
 

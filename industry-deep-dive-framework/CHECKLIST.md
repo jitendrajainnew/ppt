@@ -26,6 +26,8 @@ writing it should feel like a **research flow**; here is where it gets graded li
 ## GATE 1 — Must-have modules (the minimum bar)
 
 **[CORE] — the 15–20 page narrative (the argument):**
+- [ ] **Decision Summary / IC Page** — the read-first one-pager (industry call, best/worst
+      segment, best company, biggest risk, variant view, what-changes-my-mind, monitoring metrics)
 - [ ] **Research Question** — central uncertainty + prove/disprove + **time horizon declared**
       (trade / investment / structural)
 - [ ] **Archetype tagged** (Commodity / Technology / Regulated / Infrastructure / **Network-Platform** / Hybrid)
@@ -52,6 +54,7 @@ writing it should feel like a **research flow**; here is where it gets graded li
 - [ ] **Historical Graveyard** (how value dies here + base rate)
 - [ ] **Live Risk Dashboard** (thesis-killers + tripwires)
 - [ ] **Data sources / monitoring cadence**
+- [ ] **Research Log** — dated observations + impact on thesis (makes it a living document)
 
 ## GATE 2 — Craft (good → great)
 - [ ] **Facts > opinions** — claims sourced, not vibes
@@ -64,6 +67,10 @@ writing it should feel like a **research flow**; here is where it gets graded li
 - [ ] **Readability governor honoured** — CORE narrative stays ~15–20 pages; heavy machinery is
       in the APPENDIX. If a reader can't reach the insight, the report failed.
 - [ ] **Second-order thinking** — at least one driver→outcome→consequence chain chased 2–3 steps
+- [ ] **Evidence → Interpretation → Conclusion** kept distinct on every major call (no
+      fact/opinion blending)
+- [ ] **Confidence tagged** [H/M/L] on the key conclusions — no false precision
+- [ ] **Effort allocated by archetype** — hours actually went where ARCHETYPES says they should
 
 ---
 

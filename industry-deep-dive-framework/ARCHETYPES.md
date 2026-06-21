@@ -43,6 +43,24 @@ incomplete for that archetype, regardless of page count:
 | **Infrastructure / Asset-heavy** | Asset-utilisation analysis · project IRRs · capital-allocation deep dive · funding/leverage map |
 | **Network / Platform** | Network-effect & switching-cost analysis · market-share/concentration trend · take-rate economics · winner-take-most assessment |
 
+## Research Effort Allocation (make the weighting executable)
+
+"Over-weight these modules" is only useful if it's quantified. Use these as **time budgets** —
+a rough split of total effort, so you actually execute the weighting instead of spreading
+evenly. Adjust to taste; the point is to be deliberate.
+
+| Module group | Commodity | Technology | Regulated | Infrastructure | Network/Platform |
+|---|---|---|---|---|---|
+| **Cycle + dashboards** | 25% | 20% | 10% | 20% | 10% |
+| **Value chain + economics** | 20% | 15% | 15% | 15% | 25% |
+| **Structure / competition** | 15% | 10% | 10% | 10% | 25% |
+| **Tech / product roadmap** | 5% | 25% | 10% | 5% | 10% |
+| **Regulation / policy** | 5% | 5% | 25% | 15% | 5% |
+| **Capital allocation** | 10% | 5% | 15% | 20% | 5% |
+| **Companies + scoring** | 20% | 20% | 15% | 15% | 20% |
+
+(Columns are directional and need not sum to exactly 100 — they signal *where the hours go*.)
+
 ## Why this matters (the per-deck evidence)
 
 The four source decks each *implicitly* leaned on their archetype's dominant module — this
