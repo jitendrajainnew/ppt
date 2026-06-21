@@ -40,11 +40,14 @@ writing it should feel like a **research flow**; here is where it gets graded li
 - [ ] **Segments** broken out, each with a **tell metric**
 - [ ] **Value-chain margin map** — pools + who captures them + migration direction
 - [ ] **Industry Metrics Cheat Sheet** — the 5–10 insider ratios defined + what "good" looks like
+- [ ] **Red Flag Checklist** — the industry-specific kill-criteria (inverse of the scorecard)
 - [ ] **Industry structure** — concentration + barriers to entry
 - [ ] **Cycle position** + **Second-Order Effects** chain (driver → outcome → consequence)
 - [ ] **Management & Capital Allocation** with a score
 - [ ] **Evaluation scorecard** (weighted) defined *before* company analysis
 - [ ] **Top 2–3 company deep dives** with Balance Sheet + P&L + **ROCE/ROE**
+- [ ] **Anchor company goes DEEP** — capital-allocation timeline (dated decisions) + 10-yr ROCE
+      trend + management mistakes + an explicit **bear case** (no shallow company analysis)
 - [ ] **Consensus vs Variant View** + a **Falsification Test** (what would prove me wrong?)
 - [ ] **Valuation** (sector-appropriate + margin-of-safety) + **Investment Fit** (priced to cycle)
 - [ ] **Conclusion** that answers the Research Question at the declared horizon (your own view)
@@ -58,7 +61,7 @@ writing it should feel like a **research flow**; here is where it gets graded li
 - [ ] **Acquisition / capital-allocation track record** — deal-by-deal, value created vs destroyed
 - [ ] **Historical Graveyard** (how value dies here + base rate)
 - [ ] **Live Risk Dashboard** (thesis-killers + tripwires)
-- [ ] **Data sources / monitoring cadence**
+- [ ] **Data sources / monitoring cadence** + a **Source Quality Table** (claims weighted by tier)
 - [ ] **Research Log** — dated observations + impact on thesis (makes it a living document)
 
 ## GATE 2 — Craft (good → great)

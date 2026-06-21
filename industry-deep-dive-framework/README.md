@@ -4,6 +4,13 @@
 > structure, mapping where the money is, evaluating the businesses inside it, and
 > building your own investment conviction.
 
+> **🔒 VERSION 1.0 — FROZEN.** The architecture is complete and proven across six archetypes:
+> ✅ Technology (Semiconductors) · ✅ Consumer/Cyclical (Passenger Vehicles) · ✅ Infrastructure
+> (REITs) · ✅ Regulated × Technology (Pharma) · ✅ Regulated × Financials (Insurance) · ✅
+> Network/Platform (Exchanges). The bottleneck is no longer the framework — it's **producing
+> high-quality worked examples** (see `examples/`). v1.0 added three final modules: **5c Red Flag
+> Checklist**, **12b Management & Capital-Allocation Timeline**, **17b Source Quality Table**.
+
 This framework is **reverse-engineered from four real deep dives**:
 
 | Deep Dive | Type of industry it represents |

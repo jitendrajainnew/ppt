@@ -92,7 +92,18 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 |---|---|---|---|
 | | | | |
 
-## 6. Industry Structure & Forces  [CORE]
+## 5c. Red Flag Checklist ⭐  [CORE — the one-page kill-criteria sheet]
+> The *inverse* of the scorecard: the industry-specific signs that a company is a trap. If any
+> fire, dig before you buy. (Pharma: USFDA warning letter · single-plant dependence · Para-IV
+> concentration · Insurance: combined ratio >105% · falling persistency · solvency deterioration ·
+> Exchanges: regulatory fee cap · falling liquidity share · single-product dependence.)
+| # | Red flag (industry-specific) | Why it kills value | Where to check |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
 - **Concentration:** ☐ Oligopoly ☐ Consolidating ☐ Fragmented
 - **Porter's 5:** Rivalry _ · Entrants _ · Substitutes _ · Supplier _ · Buyer _
 - **Where know-how/IP sits / barriers to entry / key global players:** _____
@@ -158,6 +169,17 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
     |---|---|---|
     | Scale · Brand · Regulatory · Distribution · Pipeline · Switching costs | | |
 
+### 12b. Management & Capital-Allocation Timeline ⭐  [CORE for the anchor company — fixes shallow company analysis]
+> Company analysis is where most reports stay shallow. Go deep on the *anchor* company: a dated
+> timeline of the big capital-allocation decisions + a 10-year ROCE/return trend + a real bear case.
+- **Capital-allocation timeline (dated key decisions — acquisitions, capex, buybacks, demergers, mistakes):**
+  | Year | Decision | Capital | Outcome (created / destroyed / TBD) |
+  |---|---|---|---|
+  | | | | |
+- **10-year return trend:** ROCE/ROE/margin path (and *why* it inflected): _____
+- **Management quality & mistakes:** record on promises kept, governance, the worst call they made: _____
+- **The BEAR CASE (steelman it — what the bulls ignore):** _____
+
 ## 13. Failure Modes — Historical Graveyard  [APPENDIX]
 - **Who died / which sub-sectors destroyed value + cause:** _____
 - **Recurring failure pattern + base rate:** _____
@@ -190,6 +212,19 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 ## 17. Data Sources & How to Track  [APPENDIX]
 - **Primary/filings · industry bodies · analysts/handles:** _____
 - **Monitoring cadence:** _which dashboard metrics to refresh, how often, from where_
+
+### 17b. Source Quality Table  [APPENDIX] — weight evidence by reliability
+> Not all sources deserve equal trust. Weight your key claims by source tier; if the thesis
+> rests on tier-1/2 evidence, confidence is earned — if it rests on tier-4/5, flag it [L].
+| Tier | Source type | Weight | Notes |
+|---|---|---|---|
+| 1 | Annual report / regulatory filing | 5 | Primary, audited |
+| 1 | Regulator (USFDA/SEBI/IRDAI…) data | 5 | Primary, official |
+| 2 | Earnings-call transcript / management | 4 | Primary but self-interested |
+| 3 | Industry report (IQVIA/IEA/BNEF…) | 3 | Secondary, methodology matters |
+| 4 | Expert / channel-check interview | 2 | Useful, unverifiable, sample-biased |
+| 5 | Social media / forums / tips | 1 | Opinion — corroborate before using |
+- **Key claims, by source tier (do the load-bearing claims rest on tier 1–2?):** _____
 
 ## 18. Research Log  [APPENDIX] — what makes this a living document, not a dead PDF
 > Append (don't overwrite) every time a new data point lands. This is how a deep dive becomes
