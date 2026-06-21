@@ -37,6 +37,25 @@ it — a **live-sourced** (deep-research, ~June 2026) set of working assets:
 This is the difference between an *industry study* and an *investment process*: the report is the
 map; the OS is the live thesis generated from it.
 
+**Every Indian-listed industry now has an `<industry>-os/` folder with real 10-year financials**
+pulled by the pipeline (`../research-pipeline/scripts/financials.py`) from Screener's structured
+tables — `FINANCIALS-10Y.md` in each:
+
+| OS folder | Real-data highlight (10-yr) |
+|---|---|
+| `pharma-os/` | Full OS (dashboard, scorecards, question bank, memo) + Sun FY18 ROCE trough 32%→10% |
+| `steel-os/` | The capital cycle laid bare — Tata Steel −₹4,169cr→+₹41,749cr→−₹4,910cr |
+| `exchanges-os/` | Toll-road thesis proven — IEX OPM ~84%, ROCE 50-61%; CDSL/CAMS 40-56% |
+| `coal-os/` | Coal India ROCE 35-107% cash machine + the recent softening (bear's first evidence) |
+| `four-wheelers-os/` | Cyclical Maruti (ROCE 24%→6%→24%) vs compounders M&M/Eicher |
+| `solar-os/` | Manufacturing up-cycle (Waaree ROCE 16%→39%) vs IPP leverage (Adani Green ROCE ~8%) |
+| `holding-companies-os/` | Holdco discount in data — Bajaj Holdings profit ₹2,029→₹9,789cr, ROCE understated |
+| `invits-os/` | Yield-instrument signature — IndiGrid OPM ~90%, ROCE ~8%; PGInvIT GAAP swings |
+| `insurance-os/` | Cautionary: OPM/ROCE are the *wrong* lens (use VNB/EV/combined ratio) |
+
+In each case the **real long-run data either validated or sharpened the report's thesis** — the
+point of reading the source, not summarising it.
+
 ## Archetype coverage
 
 ✅ Technology · ✅ Commodity/Cyclical · ✅ Regulated · ✅ Infrastructure · ✅ Network/Platform
