@@ -25,6 +25,18 @@ Capital-Allocation Timeline, 17b Source Quality Table — present in reports bui
 | [`holding-companies.md`](holding-companies.md) | Capital-Allocation / Special-Situation | Bajaj Holdings | **Holdco discount** — framework flexing on a non-standard category |
 | [`steel.md`](steel.md) | Commodity/Cyclical × Capital-intensive | JSW Steel | The capital-cycle classic — cost curve, China, leverage |
 
+## From report → operating system
+
+`pharma.md` is the **encyclopedia**; [`pharma-os/`](pharma-os/) is what the OS *generates* from
+it — a **live-sourced** (deep-research, ~June 2026) set of working assets:
+- [`pharma-os/DASHBOARD.md`](pharma-os/DASHBOARD.md) — live KPIs (IPM growth, US erosion, FDA status, GLP-1, CDMO)
+- [`pharma-os/COMPANY-SCORECARDS.md`](pharma-os/COMPANY-SCORECARDS.md) — 6 companies scored on one rubric, ranked, with FY25 evidence
+- [`pharma-os/QUESTION-BANK.md`](pharma-os/QUESTION-BANK.md) — the unanswered question per module (Q→Evidence→Answer)
+- [`pharma-os/INVESTMENT-MEMO.md`](pharma-os/INVESTMENT-MEMO.md) — 1-page IC summary + the 4 variant views (the alpha)
+
+This is the difference between an *industry study* and an *investment process*: the report is the
+map; the OS is the live thesis generated from it.
+
 ## Archetype coverage
 
 ✅ Technology · ✅ Commodity/Cyclical · ✅ Regulated · ✅ Infrastructure · ✅ Network/Platform
