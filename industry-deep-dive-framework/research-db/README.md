@@ -8,9 +8,14 @@
 
 | File | Source depth | Feeds |
 |---|---|---|
+| [`COMPANY-FINANCIALS-10Y.md`](COMPANY-FINANCIALS-10Y.md) | **All 6 companies, clean 10-12yr P&L + ROCE** (Screener structured tables) | Scorecards, Capital-Alloc Timeline (12b), Valuation |
 | [`SUNPHARMA-deep.md`](SUNPHARMA-deep.md) | Sun Pharma AR FY21-22 + FY20-21 + FY25 results (read in full) | Scorecards, Capital-Alloc Timeline (12b), Variant View |
 
-*(Anchor company done end-to-end as the template; same pattern applies to the rest of the universe.)*
+**Two reliable extraction routes** (use the cleaner one per need):
+- **Long-run series → `financials.py`** parses Screener's structured HTML tables → accurate 10-yr Sales/
+  OPM/Net-Profit/EPS/ROCE. *Use this for the trajectory* (PDFs OCR-jumble multi-year tables).
+- **Narrative/qualitative → `pipeline.py`** downloads the annual reports + transcripts → read the MD&A,
+  risk factors, capital-allocation history, management framing. *Use this for the story.*
 
 ## The method (per company)
 1. **Pull** documents via the pipeline (annual reports, transcripts, results).

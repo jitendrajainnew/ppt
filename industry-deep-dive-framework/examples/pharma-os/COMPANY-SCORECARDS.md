@@ -58,6 +58,14 @@
 4. **Divi's is now a CDMO-majority company** — custom synthesis ~56% of mix (Q2FY26), trading ~51× forward
    (Sharekhan PT). Confirms the variant that CDMO *valuations* have run ahead of cash flows.
 
+## 10-year cross-check (from `../../research-db/COMPANY-FINANCIALS-10Y.md`)
+
+Clean Screener P&L/ratios (FY15→FY25) **validate the ranking and add nuance**:
+- **Cipla #1 confirmed** — ROCE 7%(FY17)→23%(FY24-25), profit 4×, *rising* margins = genuine compounding, not one good year.
+- **Sun #2 confirmed** — the FY18 ROCE trough (32%→10%, profit ₹7,846→₹2,542cr) is exactly why compliance caution is warranted; specialty drove the recovery.
+- **Divi's #3 may be light** — it earns **29–35% ROCE in normal years** (dipped to 16% in FY24 on capex/COVID-unwind, now 20-22%). Debt-free. Once CDMO capacity absorbs, cap-alloc 4→5 ⇒ score → ~4.40.
+- **Mankind #6 validated** — **ROCE in visible decline 37%(FY21)→16%(FY25)→14%(TTM)**: the ₹13,768cr debt-funded BSV deal is dragging returns. The long-run data *confirms* the capital-allocation red flag.
+
 ## Re-grade triggers
 - Sun Halol → VAI clearance lifts compliance 3→4 (or 5) → score → ~4.55–4.80 → likely retakes #1.
 - Mankind BSV synergy + de-leveraging lifts balance sheet/cap-alloc.

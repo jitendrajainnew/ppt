@@ -9,3 +9,7 @@ data/text/**/*.txt
 data/raw/**/_fetch.log
 data/text/**/_extract.log
 *.log
+
+# keep clean structured financials (small)
+!data/financials/
+!data/financials/*.json
