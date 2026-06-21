@@ -14,8 +14,9 @@
 | **Why now** | US erosion forcing a specialty pivot · **GLP-1 patent expired Mar-2026** (5–6× India market by 2030) · **BioSecure** driving CDMO order flow · IPM steady +8% |
 | **Best segment** | **Domestic branded** (sticky, ROCE 24–27%) + **CDMO** (BioSecure tailwind, recurring) |
 | **Worst segment** | **Plain US oral-solid generics** — high-single-digit erosion persists into 2026 |
-| **Top company** | **Sun Pharma** (rubric 4.30/5) — franchise + net cash + specialty; *Halol is the swing* |
-| **Best risk/reward "clean" name** | **Divi's** (4.20) — cleanest compliance + debt-free + purest CDMO/peptide play |
+| **Top company (rubric)** | **Cipla** (4.40/5) — **all 5 USFDA sites VAI** + ₹10,369cr net cash + One-India 42%; the pristine-compliance compounder |
+| **Top franchise (but Halol risk)** | **Sun Pharma** (4.30) — #1 India (8.3% share) + $1.2bn specialty + $3.1bn net cash; **Halol OAI/import ban is the swing** (clearance → likely retakes #1) |
+| **Cleanest pure CDMO play** | **Divi's** (4.20) — debt-free, ROCE 18.4%↑, custom-synthesis now ~56% of mix; but ~51× forward |
 | **Biggest risk** | **USFDA action** — unannounced-inspection regime since May-2025; Sun Halol import ban live |
 | **Time horizon** | Investment (1–3y) for the specialty/CDMO/GLP-1 ramp; tactical on Halol resolution |
 | **Monitoring dashboard** | See `DASHBOARD.md` — IPM growth, US erosion, FDA status, GLP-1 ramp, CDMO orders |
@@ -45,9 +46,10 @@
 ### Variant 3 — the CDMO rerating may be ahead of the cash flows (contrarian-to-the-hype)
 - **Consensus:** BioSecure + China+1 = secular CDMO re-rating; pay up (P/E >50x).
 - **Variant [M]:** RFPs are rising but **Syngene already shows margin compression / capacity under-
-  absorption** — orders haven't fully converted. The *structural story is real, the valuation prices in
-  flawless execution.* Prefer the **cash-backed compounder (Divi's, ROCE 18.4% and rising)** over the
-  story stocks; demand order-book proof before paying 50x.
+  absorption** — orders haven't fully converted, yet **Divi's already trades ~51× forward EPS** (Sharekhan
+  PT, Dec-2025) with custom-synthesis now ~56% of mix. The *structural story is real; the valuation prices
+  in flawless execution.* Prefer the **cash-backed compounder (Divi's, ROCE 18.4% and rising)** over the
+  story stocks — but demand order-book conversion before paying 50×.
 - **Falsified if:** order-book/utilisation inflects up sharply over 2–3 quarters (then the multiple is earned).
 
 ### Variant 4 — Sun's Halol overhang is mispriced *both ways*

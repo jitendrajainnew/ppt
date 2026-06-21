@@ -25,12 +25,16 @@ Variant Views → Investment Memo.** The memo is the *last* 5% — but it's the 
 | [`QUESTION-BANK.md`](QUESTION-BANK.md) | The unanswered question per module — research is Q→Evidence→Answer | Ongoing |
 | [`INVESTMENT-MEMO.md`](INVESTMENT-MEMO.md) | 1-page IC summary + the **variant views** (the alpha) | On thesis change |
 
-## Data status — this is a LIVE-SOURCED pass
+## Data status — PRIMARY-SOURCE DEEP READ
 
-Unlike the illustrative examples, this folder was built from a **deep-research sprint** (web
-searches + source extraction, ~June 2026). Figures carry **[S: source, date]**. They still need
-a final cross-check against primary filings before real use, but they are *real, dated, sourced*
-data — not placeholders.
+Built in two passes: (1) a web-search fan-out for the industry map, then (2) a **deep read of the
+actual FY25 results documents** — Sun, Dr Reddy's, Cipla, Divi's press/earnings releases pulled as
+PDFs and text-extracted in full (not summaries). Figures carry **[S: source, date]**.
+
+**The deep read changed conclusions** (the whole point): reading the filings moved **Cipla above Sun
+to #1** (all 5 Cipla USFDA sites VAI + ₹10,369cr net cash vs Sun's live Halol import ban), corrected
+Sun's GLP-1 candidate to **Phase 1** (not Phase 2), and exposed Dr Reddy's **~45% North-America
+concentration**. That's the difference between a search summary and reading the source.
 
 ## Master source list (tiered, per `../TEMPLATE.md` 17b)
 
