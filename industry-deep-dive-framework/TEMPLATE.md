@@ -135,6 +135,11 @@ _3–5 reasons it's timely, each with a number + date._  1. _____ 2. _____ 3. __
 | Promoter skin-in-the-game & track record | | |
 | **Capital Allocation Score** | | **/5** |
 
+**Acquisition track record [APPENDIX] — deal-by-deal (the heart of capital allocation):**
+| Acquirer → Target (year) | ~Value | Verdict: created / destroyed / mixed | Why |
+|---|---|---|---|
+| | | | |
+
 ## 11. How to Evaluate a Business Here ⭐  [CORE] — the weighted rubric
 | # | Criterion (industry-specific) | Weight % | Why it matters |
 |---|---|---|---|
